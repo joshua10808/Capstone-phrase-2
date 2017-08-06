@@ -1,2 +1,2 @@
-# Capstone-phrase-2
+# Capstone-Phase-2
 Django (Python File) / 
