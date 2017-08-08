@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<!-- CSS (Basic Part 2) -->
+
+<html>
+<head>
+<style>
+h1 {
+    color: blue;
+    font-family: verdana;
+    font-size: 300%;
+
+}
+p  {
+    color: red;					/* The CSS color property defines the text color to be used. */
+    font-family: courier;		/* The CSS font-family property defines the font to be used. */
+    font-size: 160%;			/* The CSS font-size property defines the text size to be used. */
+	border: 1px solid aqua;     /* The CSS border property defines a border around an HTML element. */
+	padding: 30px;				/* The CSS padding property defines a padding (space) between the text and the border. */
+	margin: 50px;				/* The CSS margin property defines a margin (space) outside the border. */
+}
+
+/* The id Attribute */
+
+#p01 {
+    color: green;				/* Define a style for the element with the specific id. */
+}								/* Note: The id of an element should be unique within a page, so the id selector is used to select one unique element! */
+
+/* The class Attribute */
+
+p.different {
+    color: black;					/* Define a style for the elements with the specific class. */
+}
+
+</style>
+</head>
+<body>
+
+<h1>Heading</h1>
+
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<p id="p01">I am different.</p>						 <!-- Define a specific style for one special element, add an id attribute to the element. -->
+<p class="different">I am different as well.</p>     <!-- Define a style for a special type of elements, add a class attribute to the element. -->
+
+</body>
+</html>

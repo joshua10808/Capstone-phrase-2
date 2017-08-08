@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<!-- Images -->
+
+<html>
+<body>
+<head>
+<style>
+img {
+    width:100%;
+}
+</style>
+</head>
+
+<!-- HTML Images Syntax -->
+
+<!--
+In HTML, images are defined with the <img> tag.
+The <img> tag is empty, it contains attributes only, and does not have a closing tag.
+The src attribute specifies the URL (web address) of the image:
+
+<img src="url" alt="some_text" style="width:width;height:height;"> 
+-->
+
+<!-- The alt Attribute -->
+
+<!--
+The alt attribute provides an alternate text for an image,
+if the user for some reason cannot view it (because of slow connection,
+an error in the src attribute, or if the user uses a screen reader).
+If a browser cannot find an image, it will display the value of the alt attribute:
+-->
+
+<p>If a browser cannot find an image, it will display the alternate text: <br>
+<img src="noimage.gif" alt="UhOh, Image Missing" style="width:128px;height:128px;"></p>
+
+<br> </br>
+<!-- Image Size - Width and Height -->
+
+<p>It is better to use the style attribute to set the width and height of an image
+(instead of using the width and height attributes), because it prevents 
+internal or external styles sheets to change the original size of an image.</p>
+
+<!-- 
+You can use the style attribute to specify the width and height of an image.
+The values are specified in pixels (use px after the value): -->
+<p>Using the style attribute:</p>
+<img src="oops.jpg" alt="no UhOh this time, oops." style="width:128px;height:128px;"> 
+<br>
+<!--
+Alternatively, you can use the width and height attributes. Here, the values are specified in pixels by default: -->
+<p>Using the width and height attributes:</p>
+<img src="oops.jpg" alt="no UhOh this time, oops." width="128" height="128"> 
+
+<br> </br>
+<!-- Image Floating -->
+
+<!-- Use the CSS float property to let the image float to the right or to the left of a text: -->
+
+<p><strong>Float the image to the right:</strong></p>
+<p>
+<img src="qut.jpg" alt="QUT" style="float:right;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.
+</p>
+
+<p><strong>Float the image to the left:</strong></p>
+<p>
+<img src="qut.jpg" alt="QUT" style="float:left;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+</p>
+
+<br> <br/>
+<!-- Image Maps -->
+
+<!--
+Use the <map> tag to define an image-map. An image-map is an image with clickable areas.
+The name attribute of the <map> tag is associated with the <img>'s usemap attribute and creates a relationship between the image and the map.
+The <map> tag contains a number of <area> tags, that defines the clickable areas in the image-map:
+-->
+
+<p>
+Click on the sun or on one of the planets to watch it closer:
+<br>
+<img src="ImageMaps/planets.gif" alt="Planets" usemap="#planetmap" style="width:145px;height:126px;">
+
+<map name="planetmap">
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="ImageMaps/sun.gif">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="ImageMaps/mercury.gif">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="ImageMaps/venus.gif">
+</map>
+</p>
+
+<!-- 
+    Use the HTML <img> element to define an image.
+    Use the HTML src attribute to define the URL of the image.
+    Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed.
+    Use the HTML width and height attributes to define the size of the image.
+    Use the CSS width and height properties to define the size of the image (alternatively).
+    Use the CSS float property to let the image float.
+    Use the HTML <map> element to define an image-map.
+    Use the HTML <area> element to define the clickable areas in the image-map.
+    Use the HTML <img>'s element usemap attribute to point to an image-map.
+-->
+
+</body>
+</html>

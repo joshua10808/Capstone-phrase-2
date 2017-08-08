@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<!--HTML Links -->
+
+<!--
+HTML links are hyperlinks.
+You can click on a link and jump to another document.
+When you move the mouse over a link, the mouse arrow will turn into a little hand.
+Note: A link does not have to be text. It can be an image or any other HTML element.
+-->
+
+<html>
+
+<!-- HTML Link Colors -->
+
+<!--
+By default, a link will appear like this (in all browsers):
+
+    An unvisited link is underlined and blue.
+    A visited link is underlined and purple.
+    An active link is underlined and red.
+-->
+
+<head>
+<style>
+a:link {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: hotpink;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active {
+    color: blue
+    background-color: transparent;
+    text-decoration: underline;
+}
+</style>
+</head>
+
+<body>
+
+<p><a href="https://www.qut.edu.au/">Visit QUT</a></p>     <!-- In HTML, links are defined with the <a> tag. -->
+
+<!--
+Note: Without a forward slash on subfolder addresses, you might generate two requests to the server.
+Many servers will automatically add a forward slash to the address, and then create a new request.
+-->
+
+<!-- Local Links -->
+
+<p><a href="welcome.txt">Welcome</a> is a link to welcome.txt.</p>      <!-- A local link (link to the same web site) is specified with a relative URL (without http://www....), or a text file in our case. -->
+
+<!-- HTML Links - The target Attribute -->
+
+<!--
+The target attribute specifies where to open the linked document.
+
+The target attribute can have one of the following values:
+    _blank - Opens the linked document in a new window or tab.
+    _self - Opens the linked document in the same window/tab as it was clicked (this is default).
+    _parent - Opens the linked document in the parent frame.
+    _top - Opens the linked document in the full body of the window.
+    framename - Opens the linked document in a named frame.
+-->
+
+<p><a href="https://www.student.qut.edu.au/" target="_blank">Visit QUT Student Page in New Browser Window or Tab!</a><br> If you set the target attribute to "_blank", the link will open in a new browser window or tab.</p>
+
+<!-- HTML Links - Image as Link -->
+
+<p>
+Click
+<a href="https://esoe.qut.edu.au/qut-login/">
+  <img src="qut.jpg" alt="QUT Student Login" style="width:42px;height:42px">
+</a>
+Me
+</p>
+
+<br></br><br></br>
+<!-- HTML Links - Create a Bookmark -->
+
+<!--
+HTML bookmarks are used to allow readers to jump to specific parts of a Web page.
+Bookmarks can be useful if your webpage is very long.
+To make a bookmark, you must first create the bookmark, and then add a link to it.
+When the link is clicked, the page will scroll to the location with the bookmark.
+-->
+
+<p><a href="#C7">Jump to Chapter 7</a></p>
+
+<h2>Chapter 1</h2>
+<p>This chapter is chapter 1.</p>
+
+<h2>Chapter 2</h2>
+<p>This chapter is chapter 2.</p>
+
+<h2>Chapter 3</h2>
+<p>This chapter is chapter 3.</p>
+
+<h2>Chapter 4</h2>
+<p>This chapter is chapter 4.</p>
+
+<h2>Chapter 5</h2>
+<p>This chapter is chapter 5.</p>
+
+<h2>Chapter 6</h2>
+<p>This chapter is chapter 6.</p>
+
+<h2 id="C7">Chapter 7</h2>
+<p>This chapter is chapter 7.</p>
+
+<h2>Chapter 8</h2>
+<p>This chapter is chapter 8.</p>
+
+<h2>Chapter 9</h2>
+<p>This chapter is chapter 9.</p>
+
+<h2>Chapter 10</h2>
+<p>This chapter is chapter 10.</p>
+
+<h2>Chapter 11</h2>
+<p>This chapter is chapter 11.</p>
+
+<h2>Chapter 12</h2>
+<p>This chapter is chapter 12.</p>
+
+<h2>Chapter 13</h2>
+<p>This chapter is chapter 13.</p>
+
+<h2>Chapter 14</h2>
+<p>This chapter is chapter 14.</p>
+
+<h2>Chapter 15</h2>
+<p>This chapter is chapter 15.</p>
+
+<p><a href="Links/Chapters.html#C4">Chapter 4 on Chapters.html</a><p>
+
+</body>
+</html>
