@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<!-- Tables -->
+
+<html>
+<body>
+
+<!-- Defining an HTML Table -->
+
+<!-- 
+An HTML table is defined with the <table> tag.
+Each table row is defined with the <tr> tag. A table header is defined with the <th> tag.
+By default, table headings are bold and centered. A table data/cell is defined with the <td> tag.
+Note: The <td> elements are the data containers of the table.
+They can contain all sorts of HTML elements; text, images, lists, other tables, etc.
+-->
+
+<head>
+<style>
+table {
+    width:100%;
+}
+table, th, td {					 /* HTML Table - Adding a Border */
+    border: 1px solid black;     /* If you do not specify a border for the table, it will be displayed without borders. */
+	border-collapse: collapse;	 /* HTML Table - Collapsed Borders */
+}
+th, td {			   
+    padding: 5px;				 /* HTML Table - Adding Cell Padding */
+}								 /* Cell padding specifies the space between the cell content and its borders. If you do not specify a padding, the table cells will be displayed without padding. */
+th {
+    text-align: left;			 /* HTML Table - Left-align Headings */
+}								 /* Border spacing specifies the space between the cells. To set the border spacing for a table, use the CSS border-spacing property: */
+table {
+    border-spacing: 5px;		 /* HTML Table - Adding Border Spacing */
+}								 /* Border spacing specifies the space between the cells. Note: If the table has collapsed borders, border-spacing has no effect. */
+
+table#t01 {						 /* A Special Style for One Table */
+    width: 100%;    			 /* To define a special style for a special table, add an id attribute to the table. */
+    background-color: aqua;
+}
+table#t02 tr:nth-child(even) {
+    background-color: #eee;
+}
+table#t02 tr:nth-child(odd) {
+   background-color:#fff;
+}
+table#t02 th {
+    background-color: black;
+    color: white;
+}
+</style>
+</head>
+<body>
+
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Group</th>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.1</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.2</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.3</td>
+    <td>74</td>
+  </tr>
+</table>
+
+<!-- HTML Table - Cells that Span Many Columns -->
+
+<h2>Cell that spans two columns:</h2>
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>     <!-- To make a cell span more than one column, use the colspan attribute. -->
+  </tr>
+  <tr>
+    <td>Student No.1</td>
+    <td>123456789</td>
+    <td>987654321</td>
+  </tr>
+</table>
+
+<!-- HTML Table - Cells that Span Many Rows -->
+
+<h2>Cell that spans two rows:</h2>
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Student No.1</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>     <!-- To make a cell span more than one row, use the rowspan attribute. -->
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>987654321</td>
+  </tr>
+</table>
+
+<br> </br>
+<!-- HTML Table - Adding a Caption -->
+
+<table style="width:100%">
+  <caption>Student Contact Details</caption>     <!-- To add a caption to a table, use the <caption> tag. -->
+  <tr>											 <!-- Note: The <caption> tag must be inserted immediately after the <table> tag. -->
+    <th>Name</th>
+    <th>Contact</th>
+  </tr>
+  <tr>
+    <td>Student No.1</td>
+    <td>123456789</td>
+  </tr>
+  <tr>
+    <td>Student No.2</td>
+    <td>987654321</td>
+  </tr>
+</table>
+
+<br> </br>
+<!-- A Special Style for One Table -->
+
+<table id="t01">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Group</th>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.1</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.2</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.3</td>
+    <td>74</td>
+  </tr>
+</table>
+
+<br> </br>
+
+<table id="t02">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Group</th>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.1</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.2</td>
+    <td>74</td>
+  </tr>
+  <tr>
+    <td>Student</td>
+    <td>No.3</td>
+    <td>74</td>
+  </tr>
+</table>
+
+</body>
+</html>
