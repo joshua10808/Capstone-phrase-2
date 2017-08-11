@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!-- Head -->
+
+<!--
+The <head> element is a container for metadata (data about data) and is placed between the <html> tag and the <body> tag.
+HTML metadata is data about the HTML document. Metadata is not displayed.
+Metadata typically define the document title, character set, styles, links, scripts, and other meta information.
+The following tags describe metadata: <title>, <style>, <meta>, <link>, <script>, and <base>.
+-->
+
+<html>
+
+<!-- The HTML <title> Element -->
+
+<!--
+The <title> element defines the title of the document, and is required in all HTML/XHTML documents.
+The <title> element:
+    defines a title in the browser tab.
+    provides a title for the page when it is added to favorites.
+    displays a title for the page in search engine results.
+-->
+
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="QUT">
+  
+  <script>
+  function myFunction() {
+    document.getElementById("demo").innerHTML = "Hello JavaScript!";
+  }
+  </script>
+  
+  <base href="https://cdn.pixabay.com/photo/" target="_blank">
+  
+</head>
+<body>
+
+<p>The content of the body element is displayed in the browser window.</p>
+<p>The content of the title element is displayed in the browser tab, in favorites and in search engine results.</p>
+
+<!-- The HTML <style> Element -->
+
+<!--
+The <style> element is used to define style information for a single HTML page:
+<head>
+  <title>Page Title</title>
+  <style>
+    body {background-color: aqua;}
+    h1 {color: red;}    
+    p {color: blue;}
+  </style>
+</head> 
+
+<h1>Heading</h1>
+<p>Paragraph.</p> 
+-->
+
+<!-- The HTML <link> Element -->
+
+<!--
+The <link> element is used to link to external style sheets:
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Heading</h1>
+<p>Paragraph.</p>
+
+<!-- The HTML <meta> Element -->  
+
+<!--
+The <meta> element is used to specify which character set is used, page description, keywords, author, and other metadata.
+Metadata is used by browsers (how to display content), by search engines (keywords), and other web services.
+
+Define the character set used:
+	<meta charset="UTF-8">
+Define a description of your web page:
+	<meta name="description" content="QUT Website">
+Define keywords for search engines:
+	<meta name="keywords" content="HTML, CSS, XML, JavaScript">
+Define the author of a page:
+	<meta name="author" content="QUT">
+Refresh document every 30 seconds:
+	<meta http-equiv="refresh" content="30">
+-->
+
+<!-- Setting The Viewport -->
+
+<!--
+The viewport is the user's visible area of a web page. It varies with the device,
+and will be smaller on a mobile phone than on a computer screen.
+You should include the following <meta> viewport element in all your web pages:
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+A <meta> viewport element gives the browser instructions on how to control the page's dimensions and scaling.
+The width=device-width part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).
+The initial-scale=1.0 part sets the initial zoom level when the page is first loaded by the browser.
+-->
+
+<br> </br>
+
+<h1>My Web Page</h1>
+<p id="demo">A Paragraph</p>
+<button type="button" onclick="myFunction()">Try it</button>
+
+<br> </br>
+
+<!-- The HTML <base> Element -->
+
+<img src="2014/05/06/21/25/garden-339236_960_720.jpg">
+<p>Since we have specified a base URL, the browser will look for the image "2014/05/06/21/25/garden-339236_960_720.jpg" at "https://cdn.pixabay.com/photo/2014/05/06/21/25/garden-339236_960_720.jpg"</p>
+
+<p><a href="https://pixabay.com/">Pixabay</a></p>
+<p>The link above opens in a new window. This is because the base target is set to "_blank".</p>
+
+</body>
+</html>
