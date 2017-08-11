@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<!-- Lists (Part 1)-->
+
+<html>
+<body>
+
+<!-- Unordered HTML List -->
+
+<h2>An Unordered HTML List</h2>
+
+<ul>			    <!-- An unordered list starts with the <ul> tag. Each list item starts with the <li> tag. -->
+  <li>Name</li>     <!-- The list items will be marked with bullets (small black circles) by default. -->
+  <li>Contact</li>
+  <li>Address</li>
+</ul>  
+
+<!-- Choose List Item Marker -->
+
+<!--
+The CSS list-style-type property is used to define the style of the list item marker. 
+disc 	Sets the list item marker to a bullet (default).
+circle 	Sets the list item marker to a circle.
+square 	Sets the list item marker to a square.
+none 	The list items will not be marked.
+
+-->
+
+<h2>Unordered List with Circle Bullets</h2>
+
+<ul style="list-style-type:circle">     <!-- Example - Circle -->
+  <li>Name</li>
+  <li>Contact</li>
+  <li>Address</li>
+</ul>  
+
+<!-- Ordered HTML List-->
+
+<h2>An Ordered HTML List</h2>
+
+<ol>			    <!-- An ordered list starts with the <ol> tag. Each list item starts with the <li> tag. -->
+  <li>Name</li>     <!-- The list items will be marked with numbers by default. -->
+  <li>Contact</li>
+  <li>Address</li>
+</ol>  
+
+<!-- The Type Attribute -->
+
+<!--
+The type attribute of the <ol> tag, defines the type of the list item marker.
+type="1" 	The list items will be numbered with numbers (default).
+type="A" 	The list items will be numbered with uppercase letters.
+type="a" 	The list items will be numbered with lowercase letters.
+type="I" 	The list items will be numbered with uppercase roman numbers.
+type="i" 	The list items will be numbered with lowercase roman numbers.
+-->
+
+<h2>Ordered List with Lowercase Letters</h2>
+
+<ol type="a">     <!-- Lowercase Letters -->
+  <li>Name</li>
+  <li>Contact</li>
+  <li>Address</li>
+</ol>  
+
+<!-- HTML Description Lists -->
+
+<h2>A Description List</h2>     <!-- A description list is a list of terms, with a description of each term. -->
+
+<dl>							<!-- The <dl> tag defines the description list. -->
+  <dt>Coffee</dt>				<!-- The <dt> tag defines the term (name). -->
+  <dd>- Black Hot Drink</dd>	<!-- The <dd> tag describes each term. -->
+  <dt>Milk</dt>
+  <dd>- White Cold Drink</dd>
+</dl>
+
+<!-- Nested HTML Lists -->
+
+<h2>A Nested List</h2>
+
+<ul>
+  <li>Name</li>			   <!-- List can be nested (lists inside lists). -->
+  <li>Contact			   <!-- Note: List items can contain new list, and other HTML elements, like images and links, etc. -->
+    <ul>
+    <li>123456789</li>     
+    <li>987654321</li>
+    </ul>
+  </li>
+  <li>Address</li>
+</ul>
+
+
+</body>
+</html>
