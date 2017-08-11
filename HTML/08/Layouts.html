@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<!-- Layouts -->
+
+<html>
+<body>
+
+<!-- HTML Layout Elements -->
+
+<h1>HTML Layout Elements</h1>
+
+<p> 
+Websites often display content in multiple columns (like a magazine or newspaper). <br>
+HTML5 offers new semantic elements that define the different parts of a web page. 
+</p>
+
+<p><img src="img_sem_elements.gif" alt="Image Missing" style="width:200px;height:250px;"></p>
+
+<p>
+&lt;header&gt; - Defines a header for a document or a section. <br>
+&lt;nav&gt; - Defines a container for navigation links. <br>
+&lt;section&gt; - Defines a section in a document. <br>
+&lt;article&gt; - Defines an independent self-contained article. <br>
+&lt;aside&gt; - Defines content aside from the content (like a sidebar). <br>
+&lt;footer&gt; - Defines a footer for a document or a section. <br>
+&lt;details&gt; - Defines additional details. <br>
+&lt;summary&gt; - Defines a heading for the &lt;details&gt; element. <br>
+<p>
+
+<!-- HTML Layout Techniques -->
+
+<!--
+There are four different ways to create multicolumn layouts. Each way has its pros and cons:
+
+    HTML tables
+    CSS float property
+    CSS framework
+    CSS flexbox
+-->
+
+<h2>Which One to Choose?</h2>
+
+<h3>HTML Tables</h3>
+
+<p>
+The &lt;table&gt; element was not designed to be a layout tool! <br>
+The purpose of the &lt;table&gt; element is to display tabular data. <br>
+So, do not use tables for your page layout! They will bring a mess into your code. <br>
+And imagine how hard it will be to redesign your site after a couple of months. <br>
+Tip: Do NOT use tables for your page layout!
+</p>
+
+<h3>CSS Frameworks</h3>
+
+<p>If you want to create your layout fast, you can use a framework, like W3.CSS or Bootstrap.</p>
+
+<h3>CSS Floats</h3>
+
+<p>
+It is common to do entire web layouts using the CSS float property. <br>
+Float is easy to learn - you just need to remember how the float and clear properties work. <br>
+Disadvantages: Floating elements are tied to the document flow, which may harm the flexibility.
+</p>
+
+<h3>CSS Flexbox</h3>
+
+<p>
+Flexbox is a new layout mode in CSS3. <br>
+Use of flexbox ensures that elements behave predictably when the page layout must accommodate different screen sizes and different display devices. <br>
+Disadvantages: Does not work in IE10 and earlier. <br>
+</p>
+
+</body>
+</html>

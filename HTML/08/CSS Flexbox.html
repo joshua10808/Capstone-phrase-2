@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<!-- CSS Flex Example -->
+
+<html>
+<head>
+<style>
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+}
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: black;color:white;}
+footer {background: #aaa;color:white;}
+.nav {background:#eee;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+
+<h3>Flexbox Example</h3>
+
+<div class="flex-container">
+<header>
+  <h1>Queensland Universities</h1>
+</header>
+
+<nav class="nav">
+<ul>
+  <li><a href="#">QUT</a></li>
+  <li><a href="#">UQ</a></li>
+  <li><a href="#">Griffith</a></li>
+</ul>
+</nav>
+
+<article class="article">
+  <h1>QUT</h1>
+  <p>The Queensland University of Technology, abbreviated as QUT, is a public research university located in the urban coastal city of Brisbane, Queensland, Australia.</p>
+  <p>QUT is located on three campuses in the Brisbane area: Gardens Point, Kelvin Grove, and Caboolture.</p>
+  <p><strong>Resize this page to see that what happens!</strong></p>
+</article>
+
+<footer>Copyright &copy; QUT</footer>
+</div>
+
+</body>
+</html>
