@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<!-- Iframes -->
+
+<!-- An iframe is used to display a web page within a web page. -->
+
+<html>
+<body>
+
+<!-- Iframe Syntax -->
+
+<!--
+An HTML iframe is defined with the <iframe> tag.
+<iframe src="URL"></iframe> 
+The src attribute specifies the URL (web address) of the inline frame page.
+-->
+
+<!-- Iframe - Set Height and Width -->
+
+<!--
+Use the height and width attributes to specify the size of the iframe.
+The attribute values are specified in pixels by default, but they can also be in percent (like "80%").
+-->
+<p>With Border</p>
+<iframe src="Demo/demo_iframe.html" height="200" width="300"></iframe>
+
+<br> </br>
+
+<!-- Iframe - Remove the Border -->
+
+<!--
+By default, an iframe has a border around it.
+To remove the border, add the style attribute and use the CSS border property.
+-->
+
+<p>Without Border</p>
+<iframe src="Demo/demo_iframe.html" style="border:none;"></iframe>
+
+<br> </br>
+
+<!-- With CSS, you can also change the size, style and color of the iframe's border. -->
+
+<p>Different Border Style</p>
+<iframe src="Demo/demo_iframe.html" style="border:2px solid grey;"></iframe>
+
+<!-- Iframe - Target for a Link -->
+
+<!--
+An iframe can be used as the target frame for a link.
+The target attribute of the link must refer to the name attribute of the iframe.
+-->
+
+<iframe height="300px" width="100%" src="Demo/demo_iframe_target_link.html" name="iframe_a"></iframe>
+<p><a href="http://quotes.toscrape.com/" target="iframe_a">quotes.toscrape.com</a></p>
+<p>When the target of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!-- File Paths -->
+
+<!--
+Path								Description
+<img src="picture.jpg"> 			picture.jpg is located in the same folder as the current page.
+<img src="images/picture.jpg"> 		picture.jpg is located in the images folder located in the current folder.
+<img src="/images/picture.jpg"> 	picture.jpg is located in the images folder located at the root of the current web.
+<img src="../picture.jpg"> 			picture.jpg is located in the folder one level up from the current folder.
+
+A file path describes the location of a file in a web site's folder structure.
+
+File paths are used when linking to external files like:
+
+    Web pages
+    Images
+    Style sheets
+    JavaScripts
+-->
+
+<html>
+<body>
+
+<!-- Absolute File Paths -->
+
+<h2>Using a Full URL File Path</h2>
+<img src="https://www.qut.edu.au/qut-logo-og-200.jpg" alt="QUT" style="width:200px">
+
+
+<!-- Relative File Paths -->
+
+<!-- A relative file path points to a file relative to the current page. -->
+
+<h2>Using a Relative File Path</h2>
+<img src="Images/qut.jpg" alt="QUT" style="width:200px">
+<br> </br>
+<img src="../05/qut.jpg" alt="QUT" style="width:200px">
+
+</body>
+</html>
