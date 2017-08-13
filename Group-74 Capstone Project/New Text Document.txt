@@ -1,0 +1,18 @@
+python manage.py startapp *name* - creats an app
+python manage.py migrate
+python manage.py makemigrations *name*
+python manage.py sqlmigrate *name* *file_name* - migration pre-check
+python manage.py createsuperuser
+
+{% block content %}					Jinja Logic Tag
+{% endblock %}						Jinja Logic Tag
+{% load staticfiles %}				Reference Static Files
+
+urls.py - controls what is served based on url patterns (regular exptressions).
+models.py - database structure and metadata.
+views.py - handles what the end-user "views" or interacts with.
+
+
+admin
+qutix54@gmail.com
+project123
