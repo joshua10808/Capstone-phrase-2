@@ -9,4 +9,4 @@ def index(request):
     return render(request, 'project/home.html')
 
 def about(request):
-    return render(request, 'project/about.html', {'content':['Test', 'Test']})
+    return render(request, 'project/about.html') #, {'content':['Test', 'Test']}
