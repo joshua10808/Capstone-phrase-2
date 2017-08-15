@@ -14,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
+from django.views.generic import ListView, DetailView
+from employer_search.models import Employer_Post
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('project.urls')),
-    url(r'^job_search/', include('job_search.urls')),
-    url(r'^employer_search/', include('employer_search.urls'))
+    url(r'^$', ListView.as_view(queryset=Employer_Post.objects.all().order_by("-date")[:25],
+                                template_name="employer_search/employer_search.html")),
+    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Employer_Post, template_name = 'employer_search/employer_post.html'))
 ]
