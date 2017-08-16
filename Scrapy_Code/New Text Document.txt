@@ -1,0 +1,2 @@
+scrapy runspider *name* -o *name.extension*
+more *name.extension*

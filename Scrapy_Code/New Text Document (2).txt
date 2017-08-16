@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/14777910/scrapy-crawl-from-script-always-blocks-script-execution-after-scraping/19060485#19060485
+https://doc.scrapy.org/en/latest/topics/practices.html
+https://doc.scrapy.org/en/latest/intro/tutorial.html
