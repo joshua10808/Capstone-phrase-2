@@ -1,0 +1,7 @@
+{% extends "project/header.html" %}
+
+{% block content %}
+	<h3>{{job_post.title}}</h3>
+	<h6>on {{job_post.date}}</h6>
+	{{post.body|safe|linebreaks}}
+{% endblock %}

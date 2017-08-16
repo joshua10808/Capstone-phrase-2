@@ -1,0 +1,8 @@
+{% extends "project/header.html" %}
+
+{% block content %}
+	{% for employer_post in object_list %}
+		<h5>{{ employer_post.date|date:"Y-m-d" }}<a href=
+		"/employer_search/{{emplyer_post.id}}"> {{ employer_post.title }}</a></h5>
+	{% endfor %}
+{% endblock %}
