@@ -9,6 +9,12 @@
 	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
 	
 	<style>
+    @font-face { 
+	font-family: 'Myanmar Text'; 
+	src: url('project/mmrtext.ttf');
+}
+	/* shows where to pull the font from */
+	
 	/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
     .row.content {height: 1500px}
     
@@ -28,16 +34,28 @@
     }
 	
 	div.ridge {
-      border-width: 3px;  
+      border-width: 2px;  
       border-style: ridge;
 	  padding-left: 15px;
 	  padding-right: 15px;
+	  padding-bottom: 10px;
+	  background-color: #ffffff;
+	  border-color: #01467d;
 	}
 	
 	h3.about {
-      color: blue;
+      color: #01467d;
 	  padding-bottom: 10px;
-      border-bottom: 2px solid #000000; /* whichever color you prefer */
+      border-bottom: 2px solid #282828; /* whichever color you prefer */
+	  font-family: Myanmar Text;
+	  font-weight: bold;
+	  font-style: bold;
+	}
+	
+	p.about {
+      color: #282828;
+	  padding-bottom: 10px;
+      border-bottom: 2px solid #282828; /* whichever color you prefer */
 	}
 	
 	li a {
