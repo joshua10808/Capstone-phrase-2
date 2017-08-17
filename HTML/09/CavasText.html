@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Canvas Text -->
+
+<html>
+<body>
+
+<!-- Drawing Text on the Canvas -->
+
+<!--
+To draw text on a canvas, the most important property and methods are:
+
+    font - defines the font properties for the text.
+    fillText(text,x,y) - draws "filled" text on the canvas.
+    strokeText(text,x,y) - draws text on the canvas (no fill).
+-->
+
+<!-- Using fillText() -->
+
+<canvas id="myCanvas1" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas1 = document.getElementById("myCanvas1");
+var ctx1 = canvas1.getContext("2d");
+ctx1.font = "30px Arial";
+ctx1.fillText("Hello World",10,50);
+</script>
+
+<!-- Using strokeText() -->
+
+<canvas id="myCanvas2" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas2 = document.getElementById("myCanvas2");
+var ctx2 = canvas2.getContext("2d");
+ctx2.font = "30px Arial";
+ctx2.strokeText("Hello World",10,50);
+</script>
+
+<canvas id="myCanvas3" width="300" height="200"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas3 = document.getElementById("myCanvas3");
+var ctx3=canvas3.getContext("2d");
+ctx3.font="30px Comic Sans MS";
+ctx3.fillStyle = "red";
+ctx3.textAlign = "center";
+ctx3.fillText("Hello World", canvas3.width/2, canvas3.height/2);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<!-- Canvas Gradients -->
+
+<!--
+Gradients can be used to fill rectangles, circles, lines, text, etc. Shapes on the canvas are not limited to solid colors.
+There are two different types of gradients:
+
+    createLinearGradient(x,y,x1,y1) - creates a linear gradient
+    createRadialGradient(x,y,r,x1,y1,r1) - creates a radial/circular gradient
+
+Once we have a gradient object, we must add two or more color stops.
+The addColorStop() method specifies the color stops, and its position along the gradient. Gradient positions can be anywhere between 0 to 1.
+To use the gradient, set the fillStyle or strokeStyle property to the gradient, then draw the shape (rectangle, text, or a line).
+-->
+
+<html>
+<body>
+
+<!-- Using createLinearGradient -->
+
+<canvas id="myCanvas1" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c1 = document.getElementById("myCanvas1");
+var ctx1 = c1.getContext("2d");
+
+// Create gradient
+var grd1 = ctx1.createLinearGradient(0,0,200,0);
+grd1.addColorStop(0,"red");
+grd1.addColorStop(1,"white");
+
+// Fill with gradient
+ctx1.fillStyle = grd1;
+ctx1.fillRect(10,10,150,80);
+</script>
+
+<!-- Using createRadialGradient(): -->
+
+<canvas id="myCanvas2" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+<script>
+var c2 = document.getElementById("myCanvas2");
+var ctx2 = c2.getContext("2d");
+
+// Create gradient
+var grd2 = ctx2.createRadialGradient(75,50,5,90,60,100);
+grd2.addColorStop(0,"red");
+grd2.addColorStop(1,"white");
+
+// Fill with gradient
+ctx2.fillStyle = grd2;
+ctx2.fillRect(10,10,150,80);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- Canvas Coordinates -->
+
+<!--
+The HTML canvas is a two-dimensional grid.
+The upper-left corner of the canvas has the coordinates (0,0).
+In the previous chapter, you saw this method used: fillRect(0,0,150,75).
+This means: Start at the upper-left corner (0,0) and draw a 150x75 pixels rectangle.
+-->
+
+<html>
+<body>
+
+<!-- Draw a Line -->
+
+<!--
+To draw a straight line on a canvas, use the following methods:
+
+    moveTo(x,y) - defines the starting point of the line
+    lineTo(x,y) - defines the ending point of the line
+
+To actually draw the line, you must use one of the "ink" methods, like stroke().
+-->
+
+<canvas id="myCanvas1" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+
+var canvas1 = document.getElementById("myCanvas1");
+var ctx1 = canvas1.getContext("2d");
+ctx1.moveTo(0,0);
+ctx1.lineTo(200,100);
+ctx1.stroke();
+
+</script>
+
+<!-- Draw a Circle -->
+
+<!--
+To draw a circle on a canvas, use the following methods:
+
+    beginPath() - begins a path
+    arc(x,y,r,startangle,endangle) - creates an arc/curve. To create a circle with arc(): Set start angle to 0 and end angle to 2*Math.PI.
+	The x and y parameters define the x- and y-coordinates of the center of the circle. The r parameter defines the radius of the circle.
+-->
+
+<canvas id="myCanvas2" width="200" height="100"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+
+<script>
+var canvas2 = document.getElementById("myCanvas2");
+var ctx2 = canvas2.getContext("2d");
+ctx2.beginPath();
+ctx2.arc(95,50,40,0,2*Math.PI);
+ctx2.stroke();
+</script> 
+
+</body>
+</html>

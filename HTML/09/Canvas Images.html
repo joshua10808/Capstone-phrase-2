@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<!-- Canvas Images -->
+
+<html>
+<body>
+
+<!-- Canvas - Images -->
+
+<!-- 
+To draw an image on a canvas, use the following method:
+
+    drawImage(image,x,y)
+-->
+
+<p>Image to use:</p>
+
+<img id="QUT" width="200" height="200"
+src="qut.jpg" alt="QUT Logo">
+
+<p>Canvas:</p>
+
+<canvas id="myCanvas" width="250" height="300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<p><button onclick="myCanvas()">Try It</button></p>
+
+<script>
+
+<!-- window.onload = function() { -->
+function myCanvas() {
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var img = document.getElementById("QUT");
+   ctx.drawImage(img, 10, 10);
+};
+</script>
+
+</body>
+</html>
