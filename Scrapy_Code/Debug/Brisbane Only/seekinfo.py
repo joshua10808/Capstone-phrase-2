@@ -10,14 +10,14 @@ class SeekinfoSpider(scrapy.Spider):
     def parse(self, response):
         self.log('I just visted: ' + response.url)
 
-        for info in response.css('div.oFneB7F'):
+        for info in response.css('article.e5uyowV'):
             item = {
-                'job_name': info.css('a._1OFaluu > span::text').extract_first(),
-                'company': info.css('p.HR3XFoW > span::text')[1].extract(),
-                'outline': info.css('p._2GUG24P > span::text').extract_first(),
-                'location': info.css('a._1_qWEhr::text').extract_first(),
+                'job_name': info.css('a._1EkZJQ7 > span::text').extract_first(),
+                'outline': info.css('span.bl7UwXp > span::text').extract_first(),
+                'info_url': info.css('a._1EkZJQ7::attr(href)').extract_first(),
                 }
             yield item
+            
         # follow pagination link
         next_page_url = response.css('a._1XIONbW::attr(href)').extract_first()
         if next_page_url:
