@@ -77,7 +77,70 @@
 </head>
 <body>
 
+<script type="text/javascript">
+
+
+	$(window).on('load',function(){
+        $('#myModal').modal({
+		show: true,
+		backdrop: 'static',
+    	keyboard: false
+		})
+    });
+
+
+/**
+$(document).ready(function() {
+    if(localStorage.getItem('popState') != 'shown'){
+        $("#popup").delay(2000).fadeIn();
+        localStorage.setItem('popState','shown')
+    }
+
+    $('#popup-close').click(function(e) // You are clicking the close button
+    {
+    $('#popup').fadeOut(); // Now the pop up is hiden.
+    });
+    $('#popup').click(function(e) 
+    {
+    $('#popup').fadeOut(); 
+    });
+});
+**/
+
+/**	
+	$(window).on('load',function(){
+	    var dialogShown = $.cookie('dialogShown');
+		if (!dialogShown) {
+        $(window).load(function(){
+            $( "#myModal" ).dialog();
+            $.cookie('dialogShown', 1);
+        });
+		}
+		else {
+        $("#myModal").hide();
+		}
+	});	
+**/
+
+</script>
+
 <div class="container-fluid">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h4 class="modal-title"><strong>User Agreememnt and Privacy Policy</strong></h4>
+				</div>
+				<div class="modal-body">
+					{% include "project/includes/user_agreement.html" %}
+					{% include "project/includes/privacy_policy.html" %}
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">I Agree</button>
+				</div>
+			</div>
+		</div>
+    </div>
 	<div class="row content">
 		<div class="col-sm-2 sidenav">
 		<center>
