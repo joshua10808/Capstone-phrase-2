@@ -1,0 +1,9 @@
+{% extends "project/header.html" %}
+
+{% block content %}
+	{% for job_post in object_list %} # loop the job_post in every list
+		<h3>{{job_post.title}}</h3>
+		<h6>on {{job_post.date}}</h6>
+		{{post.body|safe|linebreaks}}
+	{% endfor %}
+{% endblock %}

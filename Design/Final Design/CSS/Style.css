@@ -1,0 +1,29 @@
+body{background-color: f8f8f8;}
+p.first{ color: #3d3d3d; font-family: arial; font-style: bold; font-size: 11px; font-weight: normal} /* Job Description Text/ About Page Text  */
+
+h.first{ color: #01467d; font-family: arial; font-style: bold; font-size: 14px; font-weight: bold} /* Job Name Text */
+
+h.second{ color: #282828; font-family: arial; font-style: bold; font-weight: bold; font-size: 14px;} /* Job Information Text Salary, Location, Employer ETC*/
+
+
+@font-face { 
+	font-family: 'Myanmar Text'; 
+	src: url('CSS/fonts/mmrtext.ttf');
+}
+
+h.third{ color: #f2f2f2; font-family: Myanmar Text; font-style: bold; font-weight: bold; font-size: 21px; background-color: #01467d;} /*Navtab Text ie. Home, Jobsearch ETC.*/
+
+h.fourth{ color: #f2f2f2; font-family: Myanmar Text; font-style: bold; font-size: 14px; font-weight: bold; background-color: #282828;} /*Job Search Filter Text.*/
+
+p.second{ color: #3d3d3d; font-family: arial; font-style: bold; font-size: 12px; font-weight: normal;} /*Useragreement Internal Headings.*/
+
+p.third{ color: #b7b7b7; font-family: arial; font-style: italic; font-weight: normal; font-size: 12px;} /*Search Bar Default Text.*/
+
+h.fifth{ color: #01467d; font-family: Myanmar Text; font-style: bold; font-weight: bold; font-size: 16px;;} /*Headings on About Page (About/Useragreement,Privacy Policy.*/
+
+/* Colours: Nav bar background #282828, 
+element border #01467d, 
+nav tab selected %01467d, 
+nav tab selected hover #1a5282, 
+nav tab unselected hover $383838, 
+read more button hover #2b6ca3
