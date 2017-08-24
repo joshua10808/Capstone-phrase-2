@@ -13,7 +13,7 @@
     @font-face { 
 	font-family: 'Myanmar Text'; 
 	src: url('project/mmrtext.ttf');
-}
+	}
 	/* shows where to pull the font from */
 	
 	/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
@@ -60,56 +60,111 @@
 	}
 	
 	li a {
-    display: block;
-	font-weight:bold;
-    color: #ffffff;
-    text-align: left;
-    padding: 16px;
-    text-decoration: none;
-}
+      display: block;
+	  font-weight:bold;
+      color: #ffffff;
+      text-align: left;
+      padding: 16px;
+      text-decoration: none;
+	}
 
 	.nav > li > a:hover{
-    background-color: #01467D;
-	color: #ffffff;
-}
+      background-color: #01467D;
+	  color: #ffffff;
+	}
 	
-.form-wrapper-2 button {
-color: white;
-font-weight: bold;
-font-size: 11px;
-font-style: arial;
-background-color: #01467d;
-border-color: #01467d;
-border-style: solid;
+	.form-wrapper-2 button {
+  	  color: white;
+	  font-weight: bold;
+	  font-size: 11px;
+	  font-style: arial;
+	  background-color: #01467d;
+	  border-color: #01467d;
+	  border-style: solid;
+	}
 
-}
-
-
-
-.form-wrapper-2 input {
-font-size: 11px;
-font-style: italic;
-
-width: 87px
-
-}
+	.form-wrapper-2 input {
+	  font-size: 11px;
+	  font-style: italic;
+	  width: 87px
+	}
 	
 	
-.form-wrapper-2 button:hover {
-  background: #2b6ca3;
-  text-decoration: none;
-   border-color: #2b6ca3;
-  border-style: solid;
-  
-}
-	
-	
-	
+	.form-wrapper-2 button:hover {
+	  background: #2b6ca3;
+      text-decoration: none;
+      border-color: #2b6ca3;
+      border-style: solid;
+	}
+
 	</style>
 </head>
 <body>
 
+<script type="text/javascript">
+
+
+	$(window).on('load',function(){
+        $('#myModal').modal({
+		show: true,
+		backdrop: 'static',
+    	keyboard: false
+		})
+    });
+
+
+/**
+$(document).ready(function() {
+    if(localStorage.getItem('popState') != 'shown'){
+        $("#popup").delay(2000).fadeIn();
+        localStorage.setItem('popState','shown')
+    }
+
+    $('#popup-close').click(function(e) // You are clicking the close button
+    {
+    $('#popup').fadeOut(); // Now the pop up is hiden.
+    });
+    $('#popup').click(function(e) 
+    {
+    $('#popup').fadeOut(); 
+    });
+});
+**/
+
+/**	
+	$(window).on('load',function(){
+	    var dialogShown = $.cookie('dialogShown');
+		if (!dialogShown) {
+        $(window).load(function(){
+            $( "#myModal" ).dialog();
+            $.cookie('dialogShown', 1);
+        });
+		}
+		else {
+        $("#myModal").hide();
+		}
+	});	
+**/
+
+</script>
+
 <div class="container-fluid">
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h4 class="modal-title"><strong>User Agreememnt and Privacy Policy</strong></h4>
+				</div>
+				<div class="modal-body">
+					{% include "project/includes/user_agreement.html" %}
+					{% include "project/includes/privacy_policy.html" %}
+				</div>
+				<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">I Agree</button>
+				</div>
+			</div>
+		</div>
+    </div>
 	<div class="row content">
 		<div class="col-sm-2 sidenav">
 		<center>
@@ -122,21 +177,14 @@ width: 87px
 			About</a></li>
 			<li><a href='/job_search/'><img src="{% static 'project/img/SearchIconSmall.png' %}" class="responsive-img" style='float: left; margin: -6px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			Job Search</a></li>
-			
 			<li><a href='/employer_search/'><img src="{% static 'project/img/SearchIconSmall.png' %}" class="responsive-img" style='float: left; margin: -6px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			Employer Search</a></li>
-			
-			
 			<div class="button_box2">
 			<form class="form-wrapper-2 cf">
 				<input type="text" placeholder="Employers..." required>
 				<button type="submit">Search</button>
 			</form>
-</div>
-			
-	
-				
-				
+			</div>
 		</ul>
 		</center>
 		</div>
@@ -152,7 +200,5 @@ width: 87px
 
 </body>
 </html>
-
-
 
 
