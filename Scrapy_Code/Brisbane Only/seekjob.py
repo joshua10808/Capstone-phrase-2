@@ -9,7 +9,7 @@ class SeekjobSpider(scrapy.Spider):
 
     def parse(self, response):
         self.log('I just visted: ' + response.url)
-        urls = response.css('a._1OFaluu::attr(href)').extract()
+        urls = response.css('a._1EkZJQ7::attr(href)').extract()
         for url in urls:
             url = response.urljoin(url)
             yield scrapy.Request(url=url, callback=self.parse_details)
@@ -22,5 +22,6 @@ class SeekjobSpider(scrapy.Spider):
 
     def parse_details(self, response):
         yield {
-            'description': response.css('div.templatetext').extract_first()
+            'description': response.css('div.templatetext').extract_first(),
+            'more_jobs_url': response.css('a._1-im0Ib::attr(href)').extract_first(),
             }
