@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Radar Chart</title>
+    <script src="js/Chart.bundle.js"></script>
+</head>
+
+<body>
+<div style="height:30%; width:30%">
+	<canvas id="RadarChart" height="400px" width ="400px"></canvas>
+	
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+	
+	Chart.defaults.global.animation.duration = 200;
+	Chart.defaults.scale.ticks.beginAtZero = true;
+		
+	var RadarChart = document.getElementById("RadarChart");
+	var myRadarChart = new Chart(RadarChart, {
+    type: 'radar',
+	data: {
+		labels: ['Strength', 'Skill', 'Health', 'Speed', 'Luck'],
+        datasets: 
+			[{
+				label: 'Points #1',
+				backgroundColor: 'rgba(000, 255, 000, 0.1)',
+				borderColor: '#00FF00',
+				borderWidth: 2,
+				data: [10, 20, 55, 30, 10],
+			},{
+				label: 'Points #2',
+				backgroundColor: 'rgba(000, 255, 255, 0.1)',
+				borderColor: '#00FFFF',
+				borderWidth: 2,
+				data: [5, 100, 20, 70, 80],
+			}]
+		}
+	});
+	</script>
+</body>
+
+</html>
