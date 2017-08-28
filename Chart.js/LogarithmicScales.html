@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Logarithmic Scales Chart</title>
+    <script src="js/Chart.bundle.js"></script>
+</head>
+
+<body>
+<div style="height:30%; width:30%">
+	<canvas id="LineChart" height="400px" width ="400px"></canvas>
+	
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+		
+	var LineChart = document.getElementById("LineChart");
+	var myLineChart = new Chart(LineChart, {
+    type: 'line',
+	data: {
+		labels: ['Strength', 'Skill', 'Health', 'Speed', 'Luck'],
+        datasets: 
+			[{
+				label: 'Points',
+				borderColor: '#2980b9',
+				data: [10, 20, 55, 30, 10],
+			}]
+		},
+		options: {
+			scales: {
+				yAxes: [{
+				  type: 'logarithmic',
+				  ticks: {
+				    min: 1,
+					max: 60,
+				  }
+				}]
+			}
+		}
+	});
+	</script>
+</body>
+
+</html>

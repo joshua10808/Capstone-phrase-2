@@ -2,12 +2,12 @@
 <html>
 
 <head>
-    <title>Line Chart</title>
+    <title>Chart Options</title>
     <script src="js/Chart.bundle.js"></script>
 </head>
 
 <body>
-<div>
+<div style="height:30%; width:30%">
 	<canvas id="LineChart" height="400px" width ="400px"></canvas>
 	
 	<script>
@@ -37,10 +37,42 @@
 				pointRadius: 1,
 				pointHitRadius: 10,
                 data: [65, 59, 80, 81, 56, 55, 40],
-            }]
-        }
+            },{
+			    label: "My Second Dataset",
+				fill: true,
+				lineTension: 0.5,
+                backgroundColor: "rgba(75,75,192,0.4)",
+                borderColor: "rgba(75,72,192,1)",
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: "rgba(75,72,192,1)",
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: "rgba(75,72,192,1)",
+				pointHoverBorderColor: "rgba(220,220,220,1)",
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [100, 20, 60, 20, 80, 55, 90],
+			}]
+        },
+		options: {
+		  showLines: false,
+			scales: {
+				yAxes: [{
+					ticks:{
+					  reverse: true,
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}		
     });
 	</script>
+</div>
 </body>
 
 </html>
