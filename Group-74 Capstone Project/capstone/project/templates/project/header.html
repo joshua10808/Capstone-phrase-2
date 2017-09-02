@@ -101,123 +101,105 @@
 	}
 
 
-	
-/* Job Search Checklist CSS */
+	/* Job Search Checklist CSS */
 
-
-	
 	.MMUChecklist {
-	font-size: 12px;
-	height: 85px
-	color: #ffffff;
-	font-weight: bold;
-	overflow: auto;
-	margin-bottom: 10px;
-	
+	  font-size: 12px;
+	  height: 85px
+	  color: #ffffff;
+	  font-weight: bold;
+	  overflow: auto;
+	  margin-bottom: 10px;
 	}
 	
 	label {
-	color: white;
-	padding: 0px;
-	}
-	
-	
-	
-		
+	  color: white;
+	  padding: 0px;
+	}		
 	
 	.SkillsChecklist {
-	font-size: 12px;
-	height: 80px
-	color: #ffffff;
-	font-weight: bold;
-	margin: auto;
-	overflow: auto;
-
+	  font-size: 12px;
+	  height: 80px
+	  color: #ffffff;
+	  font-weight: bold;
+	  margin: auto;
+	  overflow: auto;
 	}
 	
 	label {
-	color: white;
-	padding: 0px;
+	  color: white;
+	  padding: 0px;
 	}
 	
+	/* Scrollbar CSS*/
+
+	::-webkit-scrollbar{
+	  width: 6px;
+	}
 	
-	
+	::-webkit-scrollbar-track {
+	  background-color: #d7d7d7;
+	  border-radius: 5px;
+	}	
 
+	::-webkit-scrollbar-button {
+	  height: 0px;
+	}	
 
-/* Scrollbar CSS*/
-
-::-webkit-scrollbar{
-width: 6px;
-}
-	
-::-webkit-scrollbar-track {
-background-color: #d7d7d7;
-border-radius: 5px;
-}	
-
-::-webkit-scrollbar-button {
-
-height: 0px;
-}	
-
-::-webkit-scrollbar-thumb {
-background-color: #01467d;
-border-radius: 5px;
-}	
-	
-	
-input[type=checkbox].Checkbox{
-background-color: #01467d;
-border-color: #01467d;
-border-width: 2px;
-}
+	::-webkit-scrollbar-thumb {
+	  background-color: #01467d;
+	  border-radius: 5px;
+	}	
+		
+	input[type=checkbox].Checkbox{
+	  background-color: #01467d;
+	  border-color: #01467d;
+	 border-width: 2px;
+	}
 	
 	input[type="checkbox"] { display: none; }
 
-input[type="checkbox"] + label {
-  display: block;
-  position: relative;
-  padding-left: 27px;
-  margin-bottom: 0px;
-  font: 11px/20px 'Open Sans', Arial, sans-serif;
-  color: #ddd;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-}
+	input[type="checkbox"] + label {
+	  display: block;
+	  position: relative;
+	  padding-left: 27px;
+	  margin-bottom: 0px;
+	  font: 11px/20px 'Open Sans', Arial, sans-serif;
+	  color: #ddd;
+	  cursor: pointer;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -ms-user-select: none;
+	}
 
-input[type="checkbox"] + label:last-child { margin-bottom: 0; }
+	input[type="checkbox"] + label:last-child { margin-bottom: 0; }
 
-input[type="checkbox"] + label:before {
-  content: '';
-  display: block;
-  width: 17px;
-  height: 17px;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: .6;
-  -webkit-transition: all .12s, border-color .08s;
-  transition: all .12s, border-color .08s;
-}
+	input[type="checkbox"] + label:before {
+	  content: '';
+	  display: block;
+	  width: 17px;
+	  height: 17px;
+	  border: 2px solid #ffffff;
+	  border-radius: 2px;
+	  position: absolute;
+	  left: 0;
+	  top: 0;
+	  opacity: .6;
+	  -webkit-transition: all .12s, border-color .08s;
+	  transition: all .12s, border-color .08s;
+	}
 
-input[type="checkbox"]:checked + label:before {
-  width: 10px;
-  top: -5px;
-  left: 5px;
-  border-radius: 0;
-  opacity: 1;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-
-
+	input[type="checkbox"]:checked + label:before {
+	  width: 10px;
+	  top: -5px;
+	  left: 5px;
+	  border-radius: 0;
+	  opacity: 1;
+	  border-top-color: transparent;
+	  border-left-color: transparent;
+	  -webkit-transform: rotate(45deg);
+	  transform: rotate(45deg);
+	}
 
 	
 	</style>
@@ -226,48 +208,15 @@ input[type="checkbox"]:checked + label:before {
 
 <script type="text/javascript">
 
-
-	$(window).on('load',function(){
-        $('#myModal').modal({
+    $(document).ready(function(){
+      if (document.cookie == ""){
+		document.cookie = "Status = Visited";
+		$('#myModal').modal({
 		show: true,
 		backdrop: 'static',
     	keyboard: false
-		})
+		})}
     });
-
-
-/**
-$(document).ready(function() {
-    if(localStorage.getItem('popState') != 'shown'){
-        $("#popup").delay(2000).fadeIn();
-        localStorage.setItem('popState','shown')
-    }
-
-    $('#popup-close').click(function(e) // You are clicking the close button
-    {
-    $('#popup').fadeOut(); // Now the pop up is hiden.
-    });
-    $('#popup').click(function(e) 
-    {
-    $('#popup').fadeOut(); 
-    });
-});
-**/
-
-/**	
-	$(window).on('load',function(){
-	    var dialogShown = $.cookie('dialogShown');
-		if (!dialogShown) {
-        $(window).load(function(){
-            $( "#myModal" ).dialog();
-            $.cookie('dialogShown', 1);
-        });
-		}
-		else {
-        $("#myModal").hide();
-		}
-	});	
-**/
 
 </script>
 
