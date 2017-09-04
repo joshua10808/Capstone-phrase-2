@@ -1,14 +1,18 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from scrapy.crawler import CrawlerProcess
 
-class SeekinfoSpider(scrapy.Spider):
-    name = "seekinfo"
+
+class SeekbrisbaneSpider(scrapy.Spider):
+    name = "seekbrisbane"
     allowed_domains = ["seek.com.au"]
     start_urls = ['https://www.seek.com.au/jobs-in-information-communication-technology/in-All-Brisbane-QLD']
 
     def parse(self, response):
         self.log('I just visted: ' + response.url)
+        urls = response.css('a._1EkZJQ7::attr(href)').extract()
+        for url in urls:
+            url = response.urljoin(url)
+            yield scrapy.Request(url=url, callback=self.parse_details)
 
         for info in response.css('article.e5uyowV'):
             item = {
@@ -24,3 +28,9 @@ class SeekinfoSpider(scrapy.Spider):
         if next_page_url:
             next_page_url = response.urljoin(next_page_url)
             yield scrapy.Request(url=next_page_url, callback=self.parse)
+
+    def parse_details(self, response):
+        yield {
+            'description': response.css('div.templatetext').extract_first(),
+            'more_jobs_url': response.css('a._1-im0Ib::attr(href)').extract_first(),
+            }
