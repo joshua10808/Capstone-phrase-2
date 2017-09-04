@@ -9,10 +9,6 @@ class SeekinfoSpider(scrapy.Spider):
 
     def parse(self, response):
         self.log('I just visted: ' + response.url)
-        urls = response.css('a._1EkZJQ7::attr(href)').extract()
-        for url in urls:
-            url = response.urljoin(url)
-            yield scrapy.Request(url=url, callback=self.parse_details)
 
         for info in response.css('article.e5uyowV'):
             item = {
