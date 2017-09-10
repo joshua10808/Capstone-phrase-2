@@ -76,6 +76,40 @@
 	  color: #ffffff;
 	}
 	
+	.job_dropdown {
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #282828;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  width: 767px;
+	  max-width: 100%;
+	  padding-left: 15px;
+	  margin-bottom: 3px;
+	}
+	
+	
+	.job_dropdown:hover{
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #01467d;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  padding-left: 15px;
+	  border-style: solid;
+	  border-radius: 5px;
+	}
+	
+	.job_dropdown:focus{
+	outline:0;
+	}
+	
 	.form-wrapper-2 button {
   	  color: #ffffff;
 	  font-weight: bold;
@@ -258,8 +292,11 @@
 	}
 	
 	
+	
+
 	</style>
 </head>
+
 
 <script type="text/javascript">
 
@@ -307,11 +344,18 @@
 			<li style="font-size: 20px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
 			
-			<li style="font-size: 20px;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
-			Job Search</a></li>
-    		
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="font-size: 20px;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			</a>Job Search</button>
+			
+    		<div class="collapse" id="categories_dropdowndiv" style="margin-top: 0px; -webkit-transition:height 200ms ease-in; -moz-transition:height 200ms ease-in; -o-transition:height 200ms ease-in; transition:height 200ms ease-in;">
 			<p style="color: #ffffff; font-weight: bold; font-size: 14px; margin-left: 30px; margin-top: 5px;">QUT IT Majors, Minors and Units</p>
 			
+		
+		
+		
+		
+		
+		
 		
 			<form class="MMUChecklist" style="height: 85px; margin-left: 30px; margin-top: 10px;">
 
@@ -617,12 +661,11 @@
   <label for="Social Media"> Social Media</label> <br>
   
    <input type="submit" value="Submit">
-</form> 
+</form> <br>
 
-			<button type="button3" style="height:0px; width: 0px; background-color: transparent; border-color: transparent; margin: 0px; border: 0px; padding: 0px;"></button>
+			</div>
 			
-			
-			<li style="font-size: 20px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIconSmall.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<li style="font-size: 20px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			Employer Search</a></li>
 			
 			<div class="button_box2" style="margin-left: 40px;">
