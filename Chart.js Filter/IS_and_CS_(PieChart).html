@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Pie Chart</title>
+    <script src="js/Chart.bundle.js"></script>
+</head>
+
+<body>
+<div style="height:30%; width:30%">
+	<canvas id="PieChart" height="400px" width ="400px"></canvas>
+	
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+	
+	Chart.defaults.scale.ticks.beginAtZero = true;
+		
+	var PieChart = document.getElementById("PieChart");
+	var myPieChart = new Chart(PieChart, {
+    type: 'pie',
+	data: {
+		labels: ["Database", "Design", "Games", "Internship/WorkExp", "Networking", "Security", "System Administration", "Virtualisation/Cloud"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#32ffff", "#4B0082", "#9400D3"],
+				data: [27, 27, 2, 1, 134, 57, 169, 28],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	});
+	</script>
+</body>
+
+</html>

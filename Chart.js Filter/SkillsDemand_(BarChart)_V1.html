@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Skills Demand</title>
+    <script src="js/Chart.bundle.js"></script>
+</head>
+
+<body>
+<div style="height:50%; width:50%">
+	<canvas id="SkillsDemand" height="400px" width ="400px"></canvas>
+	
+	<input type="button" value="Analysis" onclick="Analysis()">
+	<input type="button" value="CIO/Management" onclick="CIOManagement()">
+	<input type="button" value="Database" onclick="Database()">
+	<input type="button" value="Design" onclick="Design()">
+	<input type="button" value="Enterprise Architecture" onclick="EnterpriseArchitecture()">
+	<input type="button" value="Games" onclick="Games()">
+	<input type="button" value="Hardware Specialist" onclick="HardwareSpecialist()">
+	<input type="button" value="Internship/WorkExp" onclick="InternshipWorkExp()">
+	<input type="button" value="Consulting" onclick="Consulting()">
+	<input type="button" value="ITSupport" onclick="ITSupport()">
+	<input type="button" value="Networking" onclick="Networking()">
+	<input type="button" value="Programming" onclick="Programming()">
+	<input type="button" value="Project Management" onclick="ProjectManagement()">
+	<input type="button" value="Sales" onclick="Sales()">
+	<input type="button" value="Security" onclick="Security()">
+	<input type="button" value="System Administration" onclick="SystemAdministration()">
+	<input type="button" value="Teachers/Trainers" onclick="TeachersTrainers()">
+	<input type="button" value="Testers" onclick="Testers()">
+	<input type="button" value="Virtualisation/Cloud" onclick="VirtualisationCloud()">
+	<input type="button" value="Web Development" onclick="WebDevelopment()">
+	<input type="button" value="Delete Data" onclick="DeleteData()">
+	<input type="button" value="Reset Chart" onclick="ResetChart()">	
+	
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+	
+	Chart.defaults.global.animation.duration = 200;
+	Chart.defaults.scale.ticks.beginAtZero = true;
+		
+	var SkillsDemand = document.getElementById("SkillsDemand");
+	var mySkillsDemand = new Chart(SkillsDemand, {
+    type: 'bar',
+	data: {
+		labels: ["temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp"],
+        datasets: 
+			[{
+				label: 'Current Brisbane IT Job Market Skill Demands',
+				backgroundColor: '#01467d',
+				borderColor: '#01467d',
+				borderWidth: 2,
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}]
+			}	
+		}
+	});
+	
+	function Analysis(){
+	  mySkillsDemand.data.datasets[0].data[0] = 252;
+	  mySkillsDemand.data.labels[0] = "Analysis";
+	  mySkillsDemand.update();
+	  };
+	  
+	function CIOManagement(){
+	  mySkillsDemand.data.datasets[0].data[1] = 70;
+	  mySkillsDemand.data.labels[1] = "CIO/Management";
+	  mySkillsDemand.update();
+	  }
+	 
+	function Database(){
+	  mySkillsDemand.data.datasets[0].data[2] = 27;
+	  mySkillsDemand.data.labels[2] = "Database";
+	  mySkillsDemand.update();
+	  };
+
+	function Design(){
+	  mySkillsDemand.data.datasets[0].data[3] = 27;
+	  mySkillsDemand.data.labels[3] = "Design";
+	  mySkillsDemand.update();
+	  };
+
+	function EnterpriseArchitecture(){
+	  mySkillsDemand.data.datasets[0].data[4] = 75;
+	  mySkillsDemand.data.labels[4] = "Enterprise Architecture";
+	  mySkillsDemand.update();
+	  };
+
+	function Games(){
+	  mySkillsDemand.data.datasets[0].data[5] = 2;
+	  mySkillsDemand.data.labels[5] = "Games";
+	  mySkillsDemand.update();
+	  };
+
+	function HardwareSpecialist(){
+	  mySkillsDemand.data.datasets[0].data[6] = 10;
+	  mySkillsDemand.data.labels[6] = "Hardware Specalist";
+	  mySkillsDemand.update();
+	  };
+
+	function InternshipWorkExp(){
+	  mySkillsDemand.data.datasets[0].data[7] = 1;
+	  mySkillsDemand.data.labels[7] = "Internship/WorkExp";
+	  mySkillsDemand.update();
+	  };
+
+	function Consulting(){
+	  mySkillsDemand.data.datasets[0].data[8] = 74;
+	  mySkillsDemand.data.labels[8] = "Consulting";
+	  mySkillsDemand.update();
+	  };
+
+	function ITSupport(){
+	  mySkillsDemand.data.datasets[0].data[9] = 193;
+	  mySkillsDemand.data.labels[9] = "ITSupport";
+	  mySkillsDemand.update();
+	  };
+
+	function Networking(){
+	  mySkillsDemand.data.datasets[0].data[10] = 134;
+	  mySkillsDemand.data.labels[10] = "Networking";
+	  mySkillsDemand.update();
+	  };
+
+	function Programming(){
+	  mySkillsDemand.data.datasets[0].data[11] = 431;
+	  mySkillsDemand.data.labels[11] = "Programming";
+	  mySkillsDemand.update();
+	  };
+
+	function ProjectManagement(){
+	  mySkillsDemand.data.datasets[0].data[12] = 240;
+	  mySkillsDemand.data.labels[12] = "Project Management";
+	  mySkillsDemand.update();
+	  };
+
+	function Sales(){
+	  mySkillsDemand.data.datasets[0].data[13] = 22;
+	  mySkillsDemand.data.labels[13] = "Sales";
+	  mySkillsDemand.update();
+	  };
+
+	function Security(){
+	  mySkillsDemand.data.datasets[0].data[14] = 57;
+	  mySkillsDemand.data.labels[14] = "Security";
+	  mySkillsDemand.update();
+	  };
+
+	function SystemAdministration(){
+	  mySkillsDemand.data.datasets[0].data[15] = 169;
+	  mySkillsDemand.data.labels[15] = "System Administration";
+	  mySkillsDemand.update();
+	  };
+
+	function TeachersTrainers(){
+	  mySkillsDemand.data.datasets[0].data[16] = 4;
+	  mySkillsDemand.data.labels[16] = "Teachers/Trainers";
+	  mySkillsDemand.update();
+	  };
+
+	function Testers(){
+	  mySkillsDemand.data.datasets[0].data[17] = 79;
+	  mySkillsDemand.data.labels[17] = "Testers";
+	  mySkillsDemand.update();
+	  };
+
+	function VirtualisationCloud(){
+	  mySkillsDemand.data.datasets[0].data[18] = 28;
+	  mySkillsDemand.data.labels[18] = "Virtualisation/Cloud";
+	  mySkillsDemand.update();
+	  };
+
+	function WebDevelopment(){
+	  mySkillsDemand.data.datasets[0].data[19] = 94;
+	  mySkillsDemand.data.labels[19] = "Web Development";
+	  mySkillsDemand.update();
+	  };
+	
+	function DeleteData(){
+	  mySkillsDemand.data.labels.pop();
+      mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+	  });
+      mySkillsDemand.update();
+      };
+	
+	function ResetChart(){
+	  mySkillsDemand.destroy();
+	  mySkillsDemand = new Chart(SkillsDemand, {
+	  type: 'bar',
+	  data: {
+		labels: ["temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp", "temp"],
+        datasets: 
+			[{
+				label: 'Current Brisbane IT Job Market Skill Demands',
+				backgroundColor: '#01467d',
+				borderColor: '#01467d',
+				borderWidth: 2,
+				data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}]
+			}	
+		}
+	  });
+	  mySkillsDemand.update();
+	  };
+	  
+	</script>
+</body>
+
+</html>
