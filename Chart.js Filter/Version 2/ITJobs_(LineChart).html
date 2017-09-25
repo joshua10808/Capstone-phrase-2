@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>IT Jobs</title>
+    <script src="js/Chart.bundle.js"></script>
+</head>
+
+<body>
+<div style="height:45%; width:45%">
+	<canvas id="ITJobs" height="400px" width ="400px"></canvas>
+	
+	<input type="button" value="General View" onclick="GeneralView()">
+	<input type="button" value="Information System" onclick="InformationSystem()">
+	<input type="button" value="Computer Science" onclick="ComputerScience()">
+	<input type="button" value="Combination" onclick="Combination()">
+	
+	<script>
+	var ITJobs = document.getElementById("ITJobs");
+	var myITJobs = new Chart(ITJobs, {
+    type: 'line',
+    data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: 
+			[{
+                label: 'Brisbane IT Jobs Listed Each Month',
+				fill: true,
+				lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: 'rgba(75,192,192,1)',
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+				pointHoverBorderColor: 'rgba(220,220,220,1)',
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [650, 590, 800, 810, 560, 550, 400, 500, 300, 400, 100, 300],
+            }]
+        },
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}],
+				yAxes: [{
+					ticks:{
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}
+    });
+	
+	function GeneralView(){
+	  myITJobs.destroy();
+	  myITJobs = new Chart(ITJobs, {
+      type: 'line',
+      data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: 
+			[{
+                label: 'Brisbane IT Jobs Listed Each Month',
+				fill: true,
+				lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: 'rgba(75,192,192,1)',
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+				pointHoverBorderColor: 'rgba(220,220,220,1)',
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [650, 590, 800, 810, 560, 550, 400, 500, 300, 400, 100, 300],
+            }]
+        },
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}],
+				yAxes: [{
+					ticks:{
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}
+      });
+	  myITJobs.update();
+	  };
+	
+	function InformationSystem(){
+	  myITJobs.destroy();
+	  myITJobs = new Chart(ITJobs, {
+      type: 'line',
+      data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: 
+			[{
+                label: 'Brisbane IT Jobs Listed Each Month',
+				fill: true,
+				lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: 'rgba(75,192,192,1)',
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+				pointHoverBorderColor: 'rgba(220,220,220,1)',
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [350, 290, 400, 410, 460, 150, 300, 150, 100, 200, 30, 100],
+            }]
+        },
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}],
+				yAxes: [{
+					ticks:{
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}
+      });
+	  myITJobs.update();
+	  };
+	  
+	function ComputerScience(){
+	  myITJobs.destroy();
+	  myITJobs = new Chart(ITJobs, {
+      type: 'line',
+      data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: 
+			[{
+                label: 'Brisbane IT Jobs Listed Each Month',
+				fill: true,
+				lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: 'rgba(75,192,192,1)',
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+				pointHoverBorderColor: 'rgba(220,220,220,1)',
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [250, 340, 200, 120, 400, 320, 150, 250, 140, 200, 20, 100],
+            }]
+        },
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}],
+				yAxes: [{
+					ticks:{
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}
+      });
+	  myITJobs.update();
+	  };
+	
+	function Combination(){
+	  myITJobs.destroy();
+	  myITJobs = new Chart(ITJobs, {
+      type: 'line',
+      data: {
+		labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        datasets: 
+			[{
+                label: 'Brisbane IT Jobs Listed Each Month',
+				fill: true,
+				lineTension: 0.1,
+                backgroundColor: 'rgba(75,192,192,0.4)',
+                borderColor: 'rgba(75,192,192,1)',
+				borderCapStyle: 'butt',
+				borderDash: [],
+				borderDashOffset: 0.0,
+				borderJoinStyle: 'miter',
+				pointBorderColor: 'rgba(75,192,192,1)',
+				pointBackgroundColor: "#fff",
+				pointBorderWidth: 1,
+				pointHoverRadius:5,
+				pointHoverBackgroundColor: 'rgba(75,192,192,1)',
+				pointHoverBorderColor: 'rgba(220,220,220,1)',
+				pointHoverBorderWidth: 2,
+				pointRadius: 1,
+				pointHitRadius: 10,
+                data: [150, 190, 100, 110, 60, 50, 40, 50, 30, 40, 10, 30],
+            }]
+        },
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}],
+				yAxes: [{
+					ticks:{
+					  beginAtZero: true,
+					}
+				}]
+			}	
+		}
+      });
+	  myITJobs.update();
+	  };
+	</script>
+	
+</div>
+</body>
+
+</html>
