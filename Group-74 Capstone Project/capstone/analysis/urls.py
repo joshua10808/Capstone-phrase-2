@@ -14,12 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url, include
-from django.contrib import admin
+from django.views.generic import ListView, DetailView
+from analysis.models import Analysis_Post
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^', include('project.urls')),
-    url(r'^job_search/', include('job_search.urls')),
-    url(r'^employer_search/', include('employer_search.urls')),
-    url(r'^analysis/', include('analysis.urls')),
+    url(r'^$', ListView.as_view(queryset=Analysis_Post.objects.all().order_by("-date")[:25],
+                                template_name="analysis/analysis.html")),
+    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Analysis_Post, template_name = 'analysis/analysis_post.html'))
 ]
+

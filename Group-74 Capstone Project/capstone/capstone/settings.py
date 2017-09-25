@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'project',
     'job_search',
     'employer_search',
+    'analysis',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
