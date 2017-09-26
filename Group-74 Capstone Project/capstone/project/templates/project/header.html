@@ -106,7 +106,7 @@
 	}
 	
 	.job_dropdown:focus{
-	outline:0;
+	  outline:0;
 	}
 	
 	.form-wrapper-2 button {
@@ -219,7 +219,7 @@
 	input[type=checkbox].Checkbox{
 	  background-color: #01467d;
 	  border-color: #01467d;
-	 border-width: 2px;
+	  border-width: 2px;
 	}
 	
 	input[type="checkbox"] { display: none; }
@@ -320,7 +320,6 @@
     </div>
 <body scroll="no" style="overflow: hidden;">
 
-
 <div class="container-fluid">
    
 	<div class="row content">
@@ -330,9 +329,9 @@
 		</center>
 		<hr>
 		<ul class="nav nav-pills nav-stacked">
-		  <li style="font-size: 20px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="HomeIconSmall">
+		    <li style="font-size: 20px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
-		  <li style="font-size: 20px;"><a href='/analysis/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+		    <li style="font-size: 20px;"><a href='/analysis/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			Analysis</a></li>
 			<li style="font-size: 20px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
@@ -340,12 +339,12 @@
 			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="font-size: 20px;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
-			{% include "project/includes/job_search.html" %}
+			{% include "project/includes/job_search_filter.html" %}
 	
 			<li style="font-size: 20px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
 			Employer Search</a></li>
 		
-			{% include "project/includes/employer_search.html" %}	
+			{% include "project/includes/employer_search_filter.html" %}	
 		</ul>
 		
 		</div>
