@@ -1,7 +1,30 @@
 {% extends "project/header.html" %}
-
 {% block content %}
 
-<p> Welcome to Analysis Page </p>
+<div class="container-fluid">
+  <div class="col-sm-12">
+  	<center>
+    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+
+	{% include "analysis/includes/ITJobs_(LineChart).html" %}	
+	
+	</div>
+	<hr>
+	
+    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+
+	{% include "analysis/includes/JobsMajorBreakdown_(PieChart).html" %}	
+		
+    </div>
+    <hr>
+	
+    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+
+	{% include "analysis/includes/SkillsDemand_(BarChart).html" %}	
+	  
+    </div>
+	</center>
+  </div>
+</div>
 
 {% endblock %}
