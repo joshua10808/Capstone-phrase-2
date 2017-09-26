@@ -91,7 +91,6 @@
 	  margin-bottom: 3px;
 	}
 	
-	
 	.job_dropdown:hover{
 	  height: auto;
 	  font-weight:bold;
@@ -125,7 +124,6 @@
 	  font-style: italic;
 	  width: 87px
 	}
-	
 	
 	.form-wrapper-2 button:hover {
 	  background: #2b6ca3;
@@ -178,8 +176,6 @@
       border-color: #2b6ca3;
       border-style: solid;
 	}
-	
-	
 	
 	label {
 	  color: white;
@@ -271,7 +267,7 @@
 	}
 	
 	p{display: inline;}
-	
+
 	.modal-footer button{
 	  color: #ffffff;
 	  font-weight: bold;
@@ -292,7 +288,6 @@
 	
 	</style>
 </head>
-
 
 <script type="text/javascript">
 
@@ -335,9 +330,9 @@
 		</center>
 		<hr>
 		<ul class="nav nav-pills nav-stacked">
-			<li style="font-size: 20px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="HomeIconSmall">
+		  <li style="font-size: 20px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
-		    <li style="font-size: 20px;"><a href='/analysis/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+		  <li style="font-size: 20px;"><a href='/analysis/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			Analysis</a></li>
 			<li style="font-size: 20px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
@@ -350,8 +345,7 @@
 			<li style="font-size: 20px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
 			Employer Search</a></li>
 		
-			{% include "project/includes/employer_search.html" %}
-			
+			{% include "project/includes/employer_search.html" %}	
 		</ul>
 		
 		</div>
