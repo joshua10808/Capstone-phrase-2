@@ -1,0 +1,130 @@
+{% block content %}
+
+	<canvas id="JobsMajorAnalyse" height="400px" width ="400px"></canvas>
+	
+	<input type="button" value="General View" onclick="GeneralView_JMB()">
+	<input type="button" value="Information System" onclick="InformationSystem_JMB()">
+	<input type="button" value="Computer Science" onclick="ComputerScience_JMB()">
+	<input type="button" value="Combination" onclick="Combination_JMB()">
+	
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+	
+	Chart.defaults.scale.ticks.beginAtZero = true;
+		
+	var JobsMajorAnalyse = document.getElementById("JobsMajorAnalyse");
+	var myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
+    type: 'pie',
+	data: {
+		labels: ["Information System", "Computer Science", "Combination"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+				data: [737, 807, 445],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	});
+	
+	function GeneralView_JMB(){
+	  myJobsMajorAnalyse.destroy();
+	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
+      type: 'pie',
+	  data: {
+		labels: ["Information System", "Computer Science", "Combination"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+				data: [737, 807, 445],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	  });
+	  myJobsMajorAnalyse.update();
+	  };
+	  
+	function InformationSystem_JMB(){
+	  myJobsMajorAnalyse.destroy();
+	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
+      type: 'pie',
+	  data: {
+		labels: ["Analysis", "CIO/Management", "Enterprise Architecture", "Consulting", "Project Management", "Sales", "Teachers/Trainers"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#4B0082", "#9400D3"],
+				data: [252, 70, 75, 74, 240, 22, 4],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	  });
+	  myJobsMajorAnalyse.update();
+	  };
+	  
+	function ComputerScience_JMB(){
+	  myJobsMajorAnalyse.destroy();
+	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
+      type: 'pie',
+	  data: {
+		labels: ["Hardware Specialist", "IT Support", "Programming", "Testers", "Web Development"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff"],
+				data: [10, 193, 431, 79, 94],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	  });
+	  myJobsMajorAnalyse.update();
+	  };
+	  
+	function Combination_JMB(){
+	  myJobsMajorAnalyse.destroy();
+	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
+      type: 'pie',
+	  data: {
+		labels: ["Database", "Design", "Games", "Internship/WorkExp", "Networking", "Security", "System Administration", "Virtualisation/Cloud"],
+        datasets: 
+			[{
+				label: 'Frequency',
+				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#32ffff", "#4B0082", "#9400D3"],
+				data: [27, 27, 2, 1, 134, 57, 169, 28],
+			}]
+		},
+		options: {
+			animation: {
+			  animateRotate: true,
+			  animateScale: true,
+			}
+		}
+	  });
+	  myJobsMajorAnalyse.update();
+	  };
+	</script>
+
+{% endblock %}	
