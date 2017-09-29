@@ -1,24 +1,22 @@
 {% extends "project/header.html" %}
 {% block content %}
 
-<div class="container-fluid">
+<div class="container-fluid" style="width: auto; padding-right: 30px; overflow: auto; height: 90vh;">
   <div class="col-sm-12">
   	<center>
-    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+    <div class="ridge" style="height:30%; width:30%; max-height:50%; max-width:50%; float: left;">
 
 	{% include "analysis/includes/ITJobs_(LineChart).html" %}	
 	
 	</div>
-	<hr>
 	
-    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+    <div class="ridge" style="height:30%; width:30%; max-height:50%; max-width:50%; float: right;">
 
 	{% include "analysis/includes/JobsMajorBreakdown_(PieChart).html" %}	
 		
     </div>
-    <hr>
-	
-    <div class="ridge" style="height:50%; width:50%; max-height:100%; max-width:100%">
+ 
+    <div class="ridge" style="height:30%; width:30%; max-height:50%; max-width:50%; float: center;">
 
 	{% include "analysis/includes/SkillsDemand_(BarChart).html" %}	
 	  
