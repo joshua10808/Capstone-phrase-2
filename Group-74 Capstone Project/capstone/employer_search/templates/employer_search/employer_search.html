@@ -481,13 +481,15 @@ table.dataTable td {
         <thead>
             <tr>
                 <th>Employer</th>
-				<th>Seek Link PLACEHOLDER NO LINK TO COMPANY IN JSON</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+				<th>Job Name</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
                 <th>Employer</th>
-				<th>Seek Link PLACEHOLDER NO LINK TO COMPANY IN JSON</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+				<th>Job Name</th>
             </tr>
         </tfoot>
     </table>
@@ -495,10 +497,11 @@ table.dataTable td {
 	<script type="text/javascript">
     $(document).ready(function() {
         $('#empTable').dataTable({
-            "ajax": "{% static 'project/json/items.json' %}",
+            "ajax": "{% static 'project/json/emp_search_json.json' %}",
             "columns": [
                 {"data": "company"},
-				{"data": "info_url"},
+				{"data": "more_jobs_url"},
+				{"data": "job_name"},
             ]
         });   
     });
