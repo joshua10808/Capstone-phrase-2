@@ -13,7 +13,8 @@
 	<script src="{% static 'project/js/datatables.js' %}"></script>
 	<style>
 	
-	body {background-color: #f2f2f2;}
+	body {background-color: #f2f2f2;
+}
 	
     @font-face { 
 	font-family: 'Myanmar Text'; 
@@ -22,12 +23,13 @@
 	/* shows where to pull the font from */
 	
 	/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1080px}
+    .row.content {height: 1080px;}
     
     /* Set background color and 100% height */
     .sidenav {
       background-color: #282828;
       height: 100%;
+	  min-width: 200px;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -35,6 +37,7 @@
       .sidenav {
         height: auto;
         padding: 15px;
+
       }
       .row.content {height: auto;} 
     }
@@ -47,6 +50,7 @@
 	  padding-bottom: 10px;
 	  background-color: #ffffff;
 	  border-color: #01467d;
+	  border-style: solid;
 	}
 	
 	h3.about {
@@ -78,120 +82,14 @@
 	  color: #ffffff;
 	}
 	
-	.job_dropdown {
-	  height: auto;
-	  font-weight:bold;
-	  background-color: #282828;
-      text-align: left;
-	  border: 0px;
-      margin-left: 1px;
-      color: #ffffff;
-	  padding: 8px;
-	  width: 767px;
-	  max-width: 100%;
-	  padding-left: 15px;
-	  margin-bottom: 3px;
-	}
-	
-	.job_dropdown:hover{
-	  height: auto;
-	  font-weight:bold;
-	  background-color: #01467d;
-      text-align: left;
-	  border: 0px;
-      margin-left: 1px;
-      color: #ffffff;
-	  padding: 8px;
-	  padding-left: 15px;
-	  border-style: solid;
-	  border-radius: 5px;
-	}
-	
-	.job_dropdown:focus{
-	  outline:0;
-	}
-	
-	.form-wrapper-2 button {
-  	  color: #ffffff;
-	  font-weight: bold;
-	  font-size: 11px;
-	  font-style: arial;
-	  background-color: #01467d;
-	  border-color: #01467d;
-	  border-style: solid;
-	}
 
-	.form-wrapper-2 input {
-	  font-size: 11px;
-	  font-style: italic;
-	  width: 87px
-	}
-	
-	.form-wrapper-2 button:hover {
-	  background: #2b6ca3;
-      text-decoration: none;
-      border-color: #2b6ca3;
-      border-style: solid;
-	}
 
-	/* Job Search Checklist CSS */
-
-	.MMUChecklist {
-	  font-size: 12px;
-	  height: 85px
-	  color: #ffffff;
-	  font-weight: bold;
-	  overflow: auto;
-	  margin-bottom: 10px;
-	}
-	
-	.MMUChecklist input{
-	  color: #ffffff;
-	  font-weight: bold;
-	  font-size: 11px;
-	  font-style: arial;
-	  background-color: #01467d;
-	  border-color: #01467d;
-	  border-style: solid;
-	}
-	
-	.MMUChecklist input:hover{
-	  background: #2b6ca3;
-      text-decoration: none;
-      border-color: #2b6ca3;
-      border-style: solid;
-	}
-	
-	.SkillsChecklist input{
-	  color: #ffffff;
-	  font-weight: bold;
-	  font-size: 11px;
-	  font-style: arial;
-	  background-color: #01467d;
-	  border-color: #01467d;
-	  border-style: solid;
-	}
-	
-	.SkillsChecklist input:hover{
-	  background: #2b6ca3;
-      text-decoration: none;
-      border-color: #2b6ca3;
-      border-style: solid;
-	}
 	
 	label {
 	  color: white;
 	  padding: 0px;
 	}		
 	
-	.SkillsChecklist {
-	  font-size: 12px;
-	  height: 80px
-	  color: #ffffff;
-	  font-weight: bold;
-	  margin: auto;
-	  overflow: auto;
-	}
 	
 	label {
 	  color: white;
@@ -320,33 +218,28 @@
 			</div>
 		</div>
     </div>
-<body scroll="no" style="overflow: hidden;">
+
 
 <div class="container-fluid">
    
 	<div class="row content">
 		<div class="col-sm-2 sidenav">
-		<center>
-		<img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='max-height:100%; padding-top: 10px; max-width:100%' alt="profile">
-		</center>
+	
+		<img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='position: fixed; padding-top: 10px; margin-left: 1vw; height: 7.5vw; width: 13vw; min-width: 150px; min-height: 120px;' alt="profile">
+		
 		<hr>
 		<ul class="nav nav-pills nav-stacked">
-		    <li style="font-size: 20px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="HomeIconSmall">
+		    <li style="font-size: 2.5vh; position: fixed; width: 15vw; margin-top: 100px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
-		    <li style="font-size: 20px;"><a href='/analysis/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+		    <li style="font-size: 2.5vh; position: fixed; margin-top: 150px; width: 15vw;"><a href='/analysis/'><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			Analysis</a></li>
-			<li style="font-size: 20px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+			<li style="font-size: 2.5vh; position: fixed; margin-top: 200px; width: 15vw;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
-			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="font-size: 20px;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
-			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
-			
-			{% include "project/includes/job_search_filter.html" %}
-	
-			<li style="font-size: 20px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
+			<li style="font-size: 2.5vh; position: fixed; margin-top: 250px; width: 15vw;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
+			Job Search</a></li>
+			<li style="font-size: 2.5vh; position: fixed; margin-top: 300px; width: 15vw;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
 			Employer Search</a></li>
-		
-			{% include "project/includes/employer_search_filter.html" %}	
+			
 		</ul>
 		
 		</div>
