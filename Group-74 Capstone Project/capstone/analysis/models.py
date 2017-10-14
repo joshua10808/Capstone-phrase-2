@@ -12,3 +12,17 @@ class Analysis_Post(models.Model):
 
     def __unicode__(self):
         return self.title
+
+class Line_Chart(models.Model):
+	a_January = models.IntegerField()
+	a_February = models.IntegerField()
+	a_March = models.IntegerField()
+	a_April = models.IntegerField()
+	a_May = models.IntegerField()
+	a_June = models.IntegerField()
+	a_July = models.IntegerField()
+	a_August = models.IntegerField()
+	a_September = models.IntegerField()
+	a_October = models.IntegerField()
+	a_November = models.IntegerField()
+	a_December = models.IntegerField()
