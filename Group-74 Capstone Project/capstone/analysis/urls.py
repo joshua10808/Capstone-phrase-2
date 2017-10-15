@@ -20,6 +20,9 @@ from analysis.models import Analysis_Post
 urlpatterns = [
     url(r'^$', ListView.as_view(queryset=Analysis_Post.objects.all().order_by("-date")[:25],
                                 template_name="analysis/analysis.html")),
-    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Analysis_Post, template_name = 'analysis/analysis_post.html'))
+    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Analysis_Post, template_name = 'analysis/analysis_post.html')),
+    url(r'^ITJobs/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/ITJobs.html")),
+    url(r'^JobsMajorBreakdown/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/JobsMajorBreakdown.html")),
+    url(r'^SkillsDemand/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/SkillsDemand.html")),
 ]
 
