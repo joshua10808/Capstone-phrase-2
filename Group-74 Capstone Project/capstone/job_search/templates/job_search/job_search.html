@@ -107,6 +107,7 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
 }
 table.dataTable.hover tbody tr:hover.selected, table.dataTable.display tbody tr:hover.selected {
   background-color: #aab7d1;
+  
 }
 table.dataTable.order-column tbody tr > .sorting_1,
 table.dataTable.order-column tbody tr > .sorting_2,
@@ -270,6 +271,7 @@ table.dataTable,
 table.dataTable th,
 table.dataTable td {
   box-sizing: content-box;
+ 
 
 
   
@@ -283,18 +285,21 @@ table.dataTable td {
   clear: both;
   *zoom: 1;
   zoom: 1;
-  background-color: #282828;
-  padding: 5px;
+  background-color: #01467d;
+ padding-top: 5px;
   
 }
 .dataTables_wrapper .dataTables_length {
   float: left;
+  margin-left: 5px;
 
 
 }
 .dataTables_wrapper .dataTables_filter {
   float: right;
   text-align: right;
+  margin-right: 5px;
+ 
  
 
 
@@ -308,11 +313,13 @@ table.dataTable td {
   float: left;
   padding-top: 0.755em;
   color: black;
+  margin-left: 5px;
 }
 .dataTables_wrapper .dataTables_paginate {
   float: right;
   text-align: right;
   padding-top: 0.25em;
+  padding-bottom: 3px;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button {
   box-sizing: border-box;
@@ -473,17 +480,28 @@ table.dataTable td {
   }
 }
 
+
+
+
 </style>
 </head>
 
+
+
 <body>
+
+<div class="ridge">
+<h3 class="about">Job Search - Unfiltered Results</h3>
+
+
+
     <table id="empTable" class="display" width="100%" cellspacing="0">
         <thead>
             <tr>
                 <th>Job Name</th>
                 <th>Employer</th>
 				<th>Details</th>
-				<th>Seek Link</th>
+				<th>Seek Link - https://www.seek.com.au</th>
             </tr>
         </thead>
         <tfoot>
@@ -491,10 +509,21 @@ table.dataTable td {
                 <th>Job Name</th>
                 <th>Employer</th>
 				<th>Details</th>
-				<th>Seek Link</th>
+				<th>Seek Link - https://www.seek.com.au</th>
             </tr>
         </tfoot>
     </table>
+
+
+
+<h3 class="about">Filters</h3>	
+</div>	
+	
+	
+	
+	
+	
+	
     
 	<script type="text/javascript">
     $(document).ready(function() {
