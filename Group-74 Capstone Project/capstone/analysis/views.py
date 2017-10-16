@@ -2,13 +2,10 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
-
 from .models import Chart
 from .models import Line_Chart
 from .models import Pie_Chart
 from .models import Bar_Chart
-
-
 
 def index(request):
 
