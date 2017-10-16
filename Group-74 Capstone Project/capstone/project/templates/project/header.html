@@ -240,25 +240,32 @@
 	
 		
 		<ul class="nav nav-pills nav-stacked">
-		    <img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='position: fixed; padding-top: 10px; margin-left: 1vw; height: 7.5vw; width: 13vw; min-width: 200px; min-height: 120px;' alt="profile">
+		    <img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='padding-top: 10px; margin-left: 1vw; height: 7.5vw; width: 13vw; min-width: 200px; min-height: 120px;' alt="profile">
 			<br> <br>
 	      
-		    <li style="font-size: 2.5vh; position: fixed; width: 15vw; margin-top: 100px; min-width: 220px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="HomeIconSmall">
+		    <li style="font-size: 2.5vh;width: 15vw;min-width: 220px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
-		    <li style="font-size: 2.5vh; position: fixed; margin-top: 150px; width: 15vw; min-width: 220px;"><a href='/analysis/'><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
-			Analysis</a></li>
-			<li style="font-size: 2.5vh; position: fixed; margin-top: 200px; width: 15vw; min-width: 220px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+		   
+			<li style="font-size: 2.5vh;width: 15vw; min-width: 220px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="min-width: 220px; width: 15vw; position: fixed; font-size: 2.5vh; margin-top: 250px;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 25px; height 25px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv2" class="job_dropdown" style="min-width: 220px; width: 15vw;font-size: 2.5vh;"><a href='/job_search/'><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			</a>Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
+			
+	       <div class="collapse" id="categories_dropdowndiv2" style="height: 100px;">
+			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis_bargraph/" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
+			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis_linegraph/" class="filter_major"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 2.5vh; height 2.5vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Major</a></li>
+			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis_piegraph/" class="filter_major"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Skill</a></li>
+			</div>
+			
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="min-width: 220px; width: 15vw;font-size: 2.5vh;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 				{% include "project/includes/job_search_filter.html" %}
-
 	
-	
-			<li style="font-size: 2.5vh; position: absolute; margin-top: 300px; width: 15vw; min-width: 220px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
+			<li style="font-size: 2.5vh; width: 15vw; min-width: 220px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
 			Employer Search</a></li>
+			
 			
 		</ul>
 		
