@@ -35,17 +35,15 @@ class FullEmployerSpider(scrapy.Spider):
 
     def parse(self, response):
         self.log('I just visted: ' + response.url)
+        urls = response.css('a._2Pu4qnm::attr(href)').extract()
+        for url in urls:
+            url = response.urljoin(url)
+            yield scrapy.Request(url=url, callback=self.parse_details)
 
-        for info in response.css('div._2CSK29G'):
-            item = {
-                'employer_name': info.css('a._2Pu4qnm::text').extract_first(),
-                'employer_url': info.css('a._2Pu4qnm::attr(href)').extract_first(),
-                }
-            yield item
-            
-        # follow pagination link
-        next_page_url = response.css('a.rrKuH4t::attr(href)')[1].extract()
-        if next_page_url:
-            next_page_url = response.urljoin(next_page_url)
-            yield scrapy.Request(url=next_page_url, callback=self.parse)
+    def parse_details(self, response):
+        yield {
+            'employer_name': response.css('span::text')[27].extract(),
+            'employer_info': response.css("div._24rF9oI::text").extract_first(),
+            'employer_url': response.url
+            }
 
