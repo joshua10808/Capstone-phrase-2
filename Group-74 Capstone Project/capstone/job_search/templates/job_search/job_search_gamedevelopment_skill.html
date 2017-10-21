@@ -1,0 +1,44 @@
+{% extends "project/header.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<body>
+
+<div class="ridge">
+<h3 class="about">Job Search - Game Development Skill</h3>
+<p style="margin-top: -10px;">QUT Units: IGB180 Computer Games Studies, IGB181 Game Production and Technology, IGB100 Game Studio 1: Mini-Game Development, IGB383 AI for Games, INB379 Game Project Design, INB382 Real Time Rendering Techniques, IGB200 Game Studio 2: Applied Game Development, IGB220 Fundamentals of Game Design, IGB283 Game Engine Theory and Application, IGB321 Immersive Game Level Design, IGB381 Game Engine Technology</p>
+    <table id="empTable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>	
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $('#empTable').dataTable({
+            "ajax": "{% static 'project/json/skills/gamedevelopment_skill.json' %}",
+            "columns": [
+                {"data": "job_name"},
+                {"data": "company"},
+				{"data": "outline"},
+				{"data": "info_url"},
+            ]
+        });   
+    });
+    </script>
+</body>
+	
+{% endblock %}

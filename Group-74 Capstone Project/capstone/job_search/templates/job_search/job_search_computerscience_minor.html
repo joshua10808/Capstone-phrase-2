@@ -1,0 +1,43 @@
+{% extends "project/header.html" %}
+{% load staticfiles %}
+{% block content %}
+	
+<body>
+
+<div class="ridge">
+<h3 class="about">Job Search - Computer Science Minor</h3>
+    <table id="empTable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>	
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $('#empTable').dataTable({
+            "ajax": "{% static 'project/json/minors/computerscience_minor.json' %}",
+            "columns": [
+                {"data": "job_name"},
+                {"data": "company"},
+				{"data": "outline"},
+				{"data": "info_url"},
+            ]
+        });   
+    });
+    </script>
+</body>
+	
+{% endblock %}

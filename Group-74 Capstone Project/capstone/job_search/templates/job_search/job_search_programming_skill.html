@@ -1,0 +1,44 @@
+{% extends "project/header.html" %}
+{% load staticfiles %}
+{% block content %}
+	
+<body>
+
+<div class="ridge">
+<h3 class="about">Job Search - Programming Skill</h3>
+<p style="margin-top: -10px;">QUT Units: IFB104 Building IT Systems, CAB201 Programming Principles, CAB301 Algorithms and Complexity, CAB302 Software Development, CAB402 Programming Paradigms, CAB431 Search Engine Technology, CAB403 Systems Programming, IAB330 Mobile Application Development, </p>
+    <table id="empTable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Job Name</th>
+                <th>Employer</th>
+				<th>Details</th>
+				<th>Seek Link - https://www.seek.com.au</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>	 
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $('#empTable').dataTable({
+            "ajax": "{% static 'project/json/skills/programming_skill.json' %}",
+            "columns": [
+                {"data": "job_name"},
+                {"data": "company"},
+				{"data": "outline"},
+				{"data": "info_url"},
+            ]
+        });   
+    });
+    </script>
+</body>
+	
+{% endblock %}
