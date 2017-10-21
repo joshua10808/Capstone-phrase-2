@@ -16,13 +16,13 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.views.generic import ListView, DetailView
 from analysis.models import Analysis_Post
+from . import views
 
 urlpatterns = [
-    url(r'^$', ListView.as_view(queryset=Analysis_Post.objects.all().order_by("-date")[:25],
-                                template_name="analysis/analysis.html")),
-    url(r'^(?P<pk>\d+)$', DetailView.as_view(model = Analysis_Post, template_name = 'analysis/analysis_post.html')),
-    url(r'^ITJobs/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/ITJobs.html")),
-    url(r'^JobsMajorBreakdown/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/JobsMajorBreakdown.html")),
-    url(r'^SkillsDemand/$', ListView.as_view(queryset=Analysis_Post.objects.all(),template_name="analysis/SkillsDemand.html")),
+    url(r'^$', views.index, name = "index"),
+    url(r'^(?P<pk>\d+)$', views.index, name = "index"),
+    url(r'^ITJobs/$', views.line, name = "line"),
+    url(r'^JobsMajorBreakdown/$', views.pie, name = "pie"),
+    url(r'^SkillsDemand/$', views.bar, name = "bar" ),
 ]
 
