@@ -7,6 +7,8 @@ from .models import Line_Chart
 from .models import Pie_Chart
 from .models import Bar_Chart
 
+# Create your views here.
+
 def index(request):
 
 	lineChartA = Line_Chart.objects.get(id = 1);
@@ -24,7 +26,7 @@ def index(request):
 
         'pieChartA' : pieChartA,
         'barChartA' : barChartA,
-    }
+        }
 	return render(request, 'analysis/analysis.html', context)
 
 def line(request):
@@ -39,8 +41,7 @@ def line(request):
         'lineChartB': lineChartB,
         'lineChartC': lineChartC,
         'lineChartD': lineChartD,
-
-    }
+        }
 	return render(request, 'analysis/ITJobs.html', context)
 
 def pie(request):
@@ -49,7 +50,7 @@ def pie(request):
 
 	context = {
        'pieChartA' : pieChartA,
-    }
+        }
 	return render(request, 'analysis/JobsMajorBreakdown.html', context)
 
 def bar(request):
@@ -58,8 +59,8 @@ def bar(request):
 
 	context = {
         'barChartA' : barChartA,
-    }
+        }
 	return render(request, 'analysis/SkillsDemand.html', context)
 
-# Create your views here.
+
 
