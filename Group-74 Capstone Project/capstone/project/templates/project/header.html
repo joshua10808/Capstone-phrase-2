@@ -29,7 +29,8 @@
     .sidenav {
       background-color: #282828;
       height: 100%;
-	  min-width: 260px;
+	  width: 315px;
+	  float: left;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
@@ -164,12 +165,100 @@
 	  outline:0;
 	}
 	
-	.filter_major {
+		.analysis_dropdown {
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #282828;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  width: 767px;
+	  max-width: 100%;
+	  padding-left: 15px;
+	  margin-bottom: 3px;
+	}
+	
+	.analysis_dropdown:hover {
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #01467d;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  padding-left: 15px;
+	  border-style: solid;
+	  border-radius: 5px;
+	}
+	
+	.analysis_dropdown:focus {
+	  outline:0;
+	}
+	
+			.empsearch_dropdown {
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #282828;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  width: 767px;
+	  max-width: 100%;
+	  padding-left: 15px;
+	  margin-bottom: 3px;
+	}
+	
+	.empsearch_dropdown:hover {
+	  height: auto;
+	  font-weight:bold;
+	  background-color: #01467d;
+      text-align: left;
+	  border: 0px;
+      margin-left: 1px;
+      color: #ffffff;
+	  padding: 8px;
+	  padding-left: 15px;
+	  border-style: solid;
+	  border-radius: 5px;
+	}
+	
+	.empsearch_dropdown:focus {
+	  outline:0;
+	}
+	
+	
+	
+	.employer_filter {
   	  color: #ffffff;
 	  font-weight: bold;
-	  font-size: 1.6vh;
+	  font-size: 16px;
 	  font-style: arial;
-	  margin-left: 1.5vw;
+	  margin-left: 40px;
+	  height: 5px;
+	  line-height: 2.5px;
+	  min-width: 100px;
+	}
+	
+	.employer_filter:hover {
+      text-decoration: none;
+	  color: #ffffff;
+	  background-color: #01467d;
+	}
+	
+	
+	
+	
+	.filter_major {
+  	    color: #ffffff;
+	  font-weight: bold;
+	  font-size: 16px;
+	  font-style: arial;
+	  margin-left: 15px;
 	  height: 5px;
 	  line-height: 2.5px;
 	  min-width: 150px;
@@ -773,32 +862,73 @@
 		<div class="col-sm-2 sidenav">
 		
 		<ul class="nav nav-pills nav-stacked">
-		    <img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='padding-top: 10px; margin-left: 1vw; height: 7.5vw; width: 13vw; min-width: 200px; min-height: 120px;' alt="profile">
+		    <img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='padding-top: 10px; margin-left: 35px;' alt="profile">
 			<br> <br>
 	      
-		    <li style="font-size: 2.5vh;width: 15vw;min-width: 220px;"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="HomeIconSmall">
+		    <li style="font-size: 24px; width: 280px; margin-left: 2px;" class="homenavtab"><a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
 		   
-			<li style="font-size: 2.5vh;width: 15vw; min-width: 220px;"><a href='/about/'><img src="{% static 'project/img/QuestionMark.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+			<li style="font-size: 24px; width: 280px; margin-left: 2px;" class="aboutnavtab"><a href='/about/'><img src="{% static 'project/img/AboutIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv2" class="job_dropdown" style="min-width: 220px; width: 15vw;font-size: 2.5vh;"><a href='/job_search/'><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv2" class="analysis_dropdown" style="font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv2" style="height: 100px;">
-			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis/" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Introduction</a></li>
-			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis/ITJobs" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
-			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis/JobsMajorBreakdown" class="filter_major"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 2.5vh; height 2.5vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Major</a></li>
-			<li style="width: 14.5vw; min-width: 200px;"><a href="/analysis/SkillsDemand" class="filter_major"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Skill</a></li>
-			</div>
+			<li style="width: 276px;"><a href="/analysis/ITJobs" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
+			<li style="width: 276px;"><a href="/analysis/JobsMajorBreakdown" class="filter_major"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 2.5vh; height 2.5vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Major</a></li>
+			<li style="width: 276px;"><a href="/analysis/SkillsDemand" class="filter_major"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Skill</a></li>
+			<li style="width: 276px;"><a href="/analysis/" class="filter_major"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">What's This?</a></li>
+
+		</div><br>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="min-width: 220px; width: 15vw;font-size: 2.5vh;"><a href='/job_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="width: 280px; font-size: 24px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 			{% include "project/includes/job_search_filter.html" %}
 	
-			<li style="font-size: 2.5vh; width: 15vw; min-width: 220px;"><a href='/employer_search/'><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall"> 
-			Employer Search</a></li>
+		
+			<br>
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			</a>Employer Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
+			
+	        <div class="collapse" id="categories_dropdowndiv3">
+			
+			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search/" class="filter_major">- Unfiltered Search</a></li><br>
+			<p style="color: white; font-weight: bold; margin-left: 35px; font-size: 17px;">Alphabetical Filters</p><br>
+			<div style="height: 300px; overflow: auto; width: 295px; margin-top: 10px;">
+			<div style="width: 30%; float:left;">
+			<li><a href="/employer_search/b/" class="employer_filter">- A</a></li>
+			<li><a href="/employer_search/c/" class="employer_filter">- B</a></li>
+			<li><a href="/employer_search/d/" class="employer_filter">- C</a></li>
+			<li><a href="/employer_search/e/" class="employer_filter">- D</a></li>
+			<li><a href="/employer_search/e/" class="employer_filter">- E</a></li>
+			<li><a href="/employer_search/f/" class="employer_filter">- F</a></li>
+			<li><a href="/employer_search/g/" class="employer_filter">- G</a></li>
+			<li><a href="/employer_search/h/" class="employer_filter">- H</a></li>
+			<li><a href="/employer_search/i/" class="employer_filter">- I</a></li>
+			<li><a href="/employer_search/j/" class="employer_filter">- J</a></li>
+			<li><a href="/employer_search/k/" class="employer_filter">- K</a></li>
+			<li><a href="/employer_search/l/" class="employer_filter">- L</a></li>
+			<li><a href="/employer_search/m/" class="employer_filter">- M</a></li>
+			</div>
+			<div style="width: 30%; float:left; margin-left: 16px;">
+			<li><a href="/employer_search/n/" class="employer_filter">- N</a></li>
+			<li><a href="/employer_search/o/" class="employer_filter">- O</a></li>
+			<li><a href="/employer_search/p/" class="employer_filter">- P</a></li>
+			<li><a href="/employer_search/q/" class="employer_filter">- Q</a></li>
+			<li><a href="/employer_search/r/" class="employer_filter">- R</a></li>
+			<li><a href="/employer_search/s/" class="employer_filter">- S</a></li>
+			<li><a href="/employer_search/t/" class="employer_filter">- T</a></li>
+			<li><a href="/employer_search/u/" class="employer_filter">- U</a></li>
+			<li><a href="/employer_search/v/" class="employer_filter">- V</a></li>
+			<li><a href="/employer_search/w/" class="employer_filter">- W</a></li>
+			<li><a href="/employer_search/x/" class="employer_filter">- X</a></li>
+			<li><a href="/employer_search/y/" class="employer_filter">- Y</a></li>
+			<li><a href="/employer_search/z/" class="employer_filter">- Z</a></li>
+			</div>
+			</div>
+			</div>
 			
 		</ul>
 		
