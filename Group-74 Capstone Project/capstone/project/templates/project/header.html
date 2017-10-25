@@ -165,8 +165,7 @@
 	  outline:0;
 	}
 	
-	
-		.job_dropdown_majors {
+	.job_dropdown_majors {
 	  height: auto;
 	  font-weight:bold;
 	  background-color: #282828;
@@ -199,8 +198,7 @@
 	  outline:0;
 	}
 	
-	
-		.job_dropdown_minors {
+	.job_dropdown_minors {
 	  height: auto;
 	  font-weight:bold;
 	  background-color: #282828;
@@ -232,8 +230,7 @@
 	.job_dropdown_minors:focus {
 	  outline:0;
 	}
-	
-	
+  
 		.job_dropdown_skills {
 	  height: auto;
 	  font-weight:bold;
@@ -1015,33 +1012,31 @@
 			</a>Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv2" style="height: 100px;">
+
+			<li style="width: 276px;"><a href="/analysis/" class="filter_major"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">What's This?</a></li>
 			<li style="width: 276px;"><a href="/analysis/ITJobs" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
 			<li style="width: 276px;"><a href="/analysis/JobsMajorBreakdown" class="filter_major"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 2.5vh; height 2.5vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Major</a></li>
 			<li style="width: 276px;"><a href="/analysis/SkillsDemand" class="filter_major"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Skill</a></li>
-			<li style="width: 276px;"><a href="/analysis/" class="filter_major"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">What's This?</a></li>
-
-		</div><br>
+			</div><br>
 			
 			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="width: 280px; font-size: 24px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 			{% include "project/includes/job_search_filter.html" %}
-	
-		
+
 			<br>
 			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Employer Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv3">
 			
-			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search_filtered/" class="filter_major">- Unfiltered Search</a></li>
-			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search_0/" class="filter_major">- Numbers 0 to 9</a></li><br>
-		
+			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search/unfiltered/" class="filter_major">- Unfiltered Search</a></li>
+			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search/0/" class="filter_major">- Numbers 0 to 9</a></li><br>
 		
 		<button data-toggle="collapse"  data-target="#alphabetical_dropdown" class="emp_dropdown_alphabetical" style="width: 270px; font-size: 16px; margin-left: 9px;"><img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 16px; width: 16px; margin-top: 1px; float: right">
 			</a>Alphabetical Search</button>
 			
-				{% include "project/includes/employer_search_filter.html" %}
+			{% include "project/includes/employer_search_filter.html" %}
 	
 		</ul>
 		
