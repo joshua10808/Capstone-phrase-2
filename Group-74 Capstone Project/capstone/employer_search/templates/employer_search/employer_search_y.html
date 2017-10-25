@@ -1,0 +1,50 @@
+{% extends "project/header.html" %}
+{% load staticfiles %}
+{% block content %}
+	
+
+<style>
+	.empsearch_dropdown {
+	background-color: #01467d; !important}
+	.alphabetical_dropdown {
+	background-color: #01467d; !important}
+</style>
+
+
+
+<body>
+<div class="ridge" style="overflow: auto;">
+<h3 class="about">Employer Search - Y</h3>
+
+    <table id="empTable" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Employer</th>
+				<th>Employer Details</th>
+				<th>Seek Link</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Employer</th>
+				<th>Employer Details</th>
+				<th>Seek Link</th>
+            </tr>
+        </tfoot>
+    </table>
+    </div>
+	<script type="text/javascript">
+    $(document).ready(function() {
+        $('#empTable').dataTable({
+            "ajax": "{% static 'project/json/emp_search_y.json' %}",
+            "columns": [
+                {"data": "employer_name"},
+				{"data": "employer_info"},
+				{"data": "employer_url"},
+            ]
+        });   
+    });
+    </script>
+</body>
+	
+{% endblock %}
