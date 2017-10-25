@@ -1,7 +1,10 @@
 {% extends "project/header.html" %}
 {% load staticfiles %}
 {% block content %}
-	
+<style>
+	.job_dropdown {
+	background-color: #01467d; !important}
+</style>	
 <head>
 <style>
 
@@ -491,8 +494,8 @@ table.dataTable td {
 <body>
 
 <div class="ridge">
-<h3 class="about">Job Search - Artificial Intelligience Skill</h3>
-<p style="margin-top: -10px;">QUT Units: CAB320 Artificial Intelligience, CAB 420 Machine Learning</p>
+<h3 class="about">Job Search - Computer and Simulation Science Minor</h3>
+
 
 
     <table id="empTable" class="display" width="100%" cellspacing="0">
@@ -527,7 +530,7 @@ table.dataTable td {
 	<script type="text/javascript">
     $(document).ready(function() {
         $('#empTable').dataTable({
-            "ajax": "{% static 'project/json/skills/artificialintelligience_skill.json' %}",
+            "ajax": "{% static 'project/json/minors/computerandsimsci_minor.json' %}",
             "columns": [
                 {"data": "job_name"},
                 {"data": "company"},
