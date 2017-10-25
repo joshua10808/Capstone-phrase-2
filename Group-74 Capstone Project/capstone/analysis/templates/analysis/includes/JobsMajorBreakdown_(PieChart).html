@@ -5,7 +5,7 @@
 	<div style="height: 7vw; overflow: auto; padding: 20px;">
 	
 	<input type="button" value="General View" onclick="GeneralView_JMB()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
-	<input type="button" value="Information System" onclick="InformationSystem_JMB()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Information Systems" onclick="InformationSystems_JMB()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
 	<input type="button" value="Computer Science" onclick="ComputerScience_JMB()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
 	<input type="button" value="Combination" onclick="Combination_JMB()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
 	
@@ -22,11 +22,11 @@
 	var myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
     type: 'pie',
 	data: {
-		labels: ["Information System", "Computer Science", "Combination"],
+		labels: ["Information Systems", "Computer Science", "Combination"],
         datasets: 
 			[{
 				label: 'Frequency',
-				backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+				backgroundColor: ["#02365f", "#1198f9", "#b2d9f5"],
 				data: [{{pieChartA.information_system}}, 807, {{pieChartA.combination}}],
 			}]
 		},
@@ -43,11 +43,11 @@
 	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
       type: 'pie',
 	  data: {
-		labels: ["Information System", "Computer Science", "Combination"],
+		labels: ["Information Systems", "Computer Science", "Combination"],
         datasets: 
 			[{
 				label: 'Frequency',
-				backgroundColor: ["#ff0000", "#00ff00", "#0000ff"],
+				backgroundColor: ["#02365f", "#1198f9", "#b2d9f5"],
 				data: [{{pieChartA.information_system}}, 807, {{pieChartA.combination}}],
 			}]
 		},
@@ -61,7 +61,7 @@
 	  myJobsMajorAnalyse.update();
 	  };
 	  
-	function InformationSystem_JMB(){
+	function InformationSystems_JMB(){
 	  myJobsMajorAnalyse.destroy();
 	  myJobsMajorAnalyse = new Chart(JobsMajorAnalyse, {
       type: 'pie',
@@ -70,7 +70,7 @@
         datasets: 
 			[{
 				label: 'Frequency',
-				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#4B0082", "#9400D3"],
+				backgroundColor: ["#02365f", "#01467d", "#0e63a7", "#126fcd", "#1198f9", "#5eb5f4", "#95cdf6"],
 				data: [{{pieChartA.analysis}}, {{pieChartA.management}}, {{pieChartA.enterprise_architecture}}, {{pieChartA.consulting}}, {{pieChartA.project_management}}, {{pieChartA.sales}}, {{pieChartA.teachers}}],
 			}]
 		},
@@ -93,7 +93,7 @@
         datasets: 
 			[{
 				label: 'Frequency',
-				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff"],
+				backgroundColor: ["#02365f", "#0e63a7", "#1198f9", "#5eb5f4", "#b2d9f5"],
 				data: [{{pieChartA.hardware_specialist}}, {{pieChartA.it_support}}, {{pieChartA.programming}}, {{pieChartA.testers}}, {{pieChartA.web_development}}],
 			}]
 		},
@@ -116,7 +116,7 @@
         datasets: 
 			[{
 				label: 'Frequency',
-				backgroundColor: ["#ff0000", "#ff7f00", "#ffff00", "#00ff00", "#0000ff", "#32ffff", "#4B0082", "#9400D3"],
+				backgroundColor: ["#02365f", "#01467d", "#0e63a7", "#126fcd", "#1198f9", "#5eb5f4", "#95cdf6", "#b2d9f5"],
 				data: [{{pieChartA.database}}, {{pieChartA.design}}, {{pieChartA.games}}, {{pieChartA.internship}}, {{pieChartA.networking}}, {{pieChartA.security}}, {{pieChartA.system_administration}}, {{pieChartA.cloud}}],
 			}]
 		},
