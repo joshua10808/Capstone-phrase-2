@@ -56,8 +56,8 @@ def job_search_userexperience(request):
 def job_search_analysis_skill(request):
     return render(request, 'job_search/job_search_analysis_skill.html')
 
-def job_search_artificialintelligience_skill(request):
-    return render(request, 'job_search/job_search_artificialintelligience_skill.html')
+def job_search_artificialintelligence_skill(request):
+    return render(request, 'job_search/job_search_artificialintelligence_skill.html')
 
 def job_search_cloudcomputing_skill(request):
     return render(request, 'job_search/job_search_cloudcomputing_skill.html')
