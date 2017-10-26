@@ -1,0 +1,262 @@
+{% block content %}
+
+	<canvas id="SkillsDemand" height="400px" width ="800px"></canvas>
+	
+	<div style="height: 7vw; overflow: auto; padding: 20px;">
+
+	<input type="button" value="Analysis" onclick="Analysis()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="CIO/Management" onclick="CIOManagement()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Database" onclick="Database()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Design" onclick="Design()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Enterprise Architecture" onclick="EnterpriseArchitecture()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Games" onclick="Games()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Hardware Specialist" onclick="HardwareSpecialist()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Internship/WorkExp" onclick="InternshipWorkExp()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Consulting" onclick="Consulting()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="ITSupport" onclick="ITSupport()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Networking" onclick="Networking()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Programming" onclick="Programming()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Project Management" onclick="ProjectManagement()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Sales" onclick="Sales()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Security" onclick="Security()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="System Administration" onclick="SystemAdministration()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Teachers/Trainers" onclick="TeachersTrainers()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Testers" onclick="Testers()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Virtualisation/Cloud" onclick="VirtualisationCloud()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Web Development" onclick="WebDevelopment()" style="background-color: #01467d; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Delete Data" onclick="DeleteData()" style="background-color: #2b6ca3; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+	<input type="button" value="Reset Chart" onclick="ResetChart()" style="background-color: #2b6ca3; color: white; border-style: solid; border-color: #01467d; margin: 5px; width:10vw">
+
+	</div>
+
+	<script>
+	
+	console.log(Chart.defaults.global);
+	console.log(Chart.defaults);
+	
+	//Chart.defaults.global.animation.duration = 200;
+	Chart.defaults.scale.ticks.beginAtZero = true;
+		
+	var SkillsDemand = document.getElementById("SkillsDemand");
+	var mySkillsDemand = new Chart(SkillsDemand, {
+    type: 'bar',
+	data: {
+		labels: [],
+        datasets: 
+			[{
+				label: 'Current Brisbane IT Job Market Skill Demands',
+				backgroundColor: '#01467d',
+				borderColor: '#01467d',
+				borderWidth: 2,
+				data: [],
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}]
+			}	
+		}
+	});
+	
+	function Analysis(){
+	  mySkillsDemand.data.labels.push("Analysis");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.analysis}});
+	  });
+	  mySkillsDemand.update();
+	  };
+	  
+	function CIOManagement(){
+	  mySkillsDemand.data.labels.push("CIO/Management");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.cIOManagement}});
+	  });
+	  mySkillsDemand.update();
+	  };
+	 
+	function Database(){
+	  mySkillsDemand.data.labels.push("Database");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.database}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Design(){
+	  mySkillsDemand.data.labels.push("Design");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.design}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function EnterpriseArchitecture(){
+	  mySkillsDemand.data.labels.push("Enterprise Architecture");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.enterpriseArchitecture}});
+	  });
+	  mySkillsDemand.update();
+	  };
+	  
+	function Games(){
+	  mySkillsDemand.data.labels.push("Games");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.games}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function HardwareSpecialist(){
+	mySkillsDemand.data.labels.push("Hardware Specialist");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.hardwareSpecialist}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function InternshipWorkExp(){
+	  mySkillsDemand.data.labels.push("Internship/WorkExp");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.internshipWorkExp}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Consulting(){
+	  mySkillsDemand.data.labels.push("Consulting");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.consulting}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function ITSupport(){
+	  mySkillsDemand.data.labels.push("ITSupport");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.itSupport}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Networking(){
+	  mySkillsDemand.data.labels.push("Networking");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.networking}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Programming(){
+	  mySkillsDemand.data.labels.push("Programming");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.programming}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function ProjectManagement(){
+	  mySkillsDemand.data.labels.push("Project Management");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.projectManagement}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Sales(){
+	  mySkillsDemand.data.labels.push("Sales");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.sales}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Security(){
+	  mySkillsDemand.data.labels.push("Security");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.security}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function SystemAdministration(){
+	  mySkillsDemand.data.labels.push("System Administration");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.systemAdministration}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function TeachersTrainers(){
+	  mySkillsDemand.data.labels.push("Teachers/Trainers");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.teachersTrainers}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function Testers(){
+	  mySkillsDemand.data.labels.push("Testers");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.testers}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function VirtualisationCloud(){
+	  mySkillsDemand.data.labels.push("Virtualisation/Cloud");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.virtualisationCloud}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function WebDevelopment(){
+	  mySkillsDemand.data.labels.push("Web Development");
+	  mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.push({{barChartA.webDevelopment}});
+	  });
+	  mySkillsDemand.update();
+	  };
+
+	function DeleteData(){
+	  mySkillsDemand.data.labels.pop();
+      mySkillsDemand.data.datasets.forEach((dataset) => {
+        dataset.data.pop();
+	  });
+      mySkillsDemand.update();
+      };
+	
+	function ResetChart(){
+	  mySkillsDemand.destroy();
+	  mySkillsDemand = new Chart(SkillsDemand, {
+      type: 'bar',
+	  data: {
+		labels: [],
+        datasets: 
+			[{
+				label: 'Current Brisbane IT Job Market Skill Demands',
+				backgroundColor: '#01467d',
+				borderColor: '#01467d',
+				borderWidth: 2,
+				data: [],
+			}]
+		},
+		options: {
+			scales: {
+				xAxes: [{
+					ticks:{
+					  autoSkip: false,
+					}
+				}]
+			}	
+		}
+	  });
+	  mySkillsDemand.update();
+	  };
+	</script>
+
+{% endblock %}	
