@@ -11,10 +11,14 @@
 	<script src="{% static 'project/js/bootstrap.min.js' %}"></script>
 	<script src="{% static 'project/js/Chart.bundle.js' %}"></script>
 	<script src="{% static 'project/js/datatables.js' %}"></script>
+	<link rel="shortcut icon" href="{% static 'project/img/favicon.png' %}">
+	
 	<style>
 	
 	body{background-color: #f2f2f2;
 	}
+	
+	body{display: inline-block}
 	
     @font-face { 
 	font-family: 'Myanmar Text'; 
@@ -23,20 +27,22 @@
 	/* shows where to pull the font from */
 	
 	/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1080px;}
+    .row.content {height: 1270px;
+	max-height: 1270px;}
     
     /* Set background color and 100% height */
     .sidenav {
       background-color: #282828;
-      height: 100%;
+      height: 1270px;
 	  width: 315px;
 	  float: left;
+	  max-height: 1270px;
     }
     
     /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px){
       .sidenav {
-        height: auto;
+        height: 1270px;
         padding: 15px;
       }
       .row.content {height: auto;} 
@@ -197,6 +203,12 @@
 	.job_dropdown_majors:focus {
 	  outline:0;
 	}
+	
+		
+	
+	
+	
+	
 	
 	.job_dropdown_minors {
 	  height: auto;
@@ -388,6 +400,82 @@
 	}
 	
 	
+	         .filter_analysis_1 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_analysis_1:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			.filter_analysis_2 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_analysis_2:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			
+			.filter_analysis_3 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_analysis_3:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			
+			.filter_analysis_4 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_analysis_4:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+	
+	
+	
+	
+	
 	
 	
 	.filter_major {
@@ -406,6 +494,600 @@
 	  color: #ffffff;
 	  background-color: #01467d;
 	}
+	
+			  .filter_major_1 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_major_1:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+	
+			  .filter_major_2 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_major_2:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+		
+			  .filter_major_3 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_major_3:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+
+			  .filter_major_4 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_major_4:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+
+
+			  .filter_minor_1 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_1:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+		    .filter_minor_2 {
+			  color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_2:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+		     .filter_minor_3 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_3:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_4 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_4:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_5 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_5:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_6 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_6:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_7 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_7:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_8 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_8:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_9 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_9:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			.filter_minor_10 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_10:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_minor_11 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_minor_11:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			
+			
+			.filter_skill_1 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_1:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_2 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_2:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_3 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_3:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_4 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_4:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_5 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_5:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_6 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_6:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_7 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_7:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_8 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_8:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_9 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_9:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_10 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_10:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_11 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_11:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_12 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_12:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_13 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_13:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_14 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_14:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_15 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_15:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_16 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_16:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_17 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_17:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			.filter_skill_18 {
+				color: #ffffff;
+			  font-weight: bold;
+			  font-size: 16px;
+			  font-style: arial;
+			  margin-left: 15px;
+			  height: 5px;
+			  line-height: 2.5px;
+			  min-width: 150px;
+			}
+			
+			.filter_skill_18:hover {
+			  text-decoration: none;
+			  color: #ffffff;
+			  background-color: #01467d;
+			}
+			
+			
+			
 
 	/* Datatables CSS */
 	
@@ -994,9 +1676,9 @@
 		</div>
     </div>
 
-<div class="container-fluid">
-	<div class="row content">
-		<div class="col-sm-2 sidenav">
+<div class="container-fluid" style=" float: left">
+	<div class="row content" style=" float: left">
+		<div class="col-sm-2 sidenav" style=" float: left">
 		
 		<ul class="nav nav-pills nav-stacked">
 		    <img src="{% static 'project/img/profile.png' %}" class="responsive-img" style='padding-top: 10px; margin-left: 35px;' alt="profile">
@@ -1008,32 +1690,33 @@
 			<li style="font-size: 24px; width: 280px; margin-left: 2px;" class="aboutnavtab"><a href='/about/'><img src="{% static 'project/img/AboutIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv2" class="analysis_dropdown" style="margin-top: 2px; font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv2" class="analysis_dropdown" style="height: 55px; margin-top: 2px; font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv2" style="height: 100px;">
 
-			<li style="width: 276px;"><a href="/analysis/" class="filter_major"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">What's This?</a></li>
-			<li style="width: 276px;"><a href="/analysis/ITJobs" class="filter_major"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
-			<li style="width: 276px;"><a href="/analysis/JobsMajorBreakdown" class="filter_major"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 2.5vh; height 2.5vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Major</a></li>
-			<li style="width: 276px;"><a href="/analysis/SkillsDemand" class="filter_major"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 2.75vh; height 2.75vh; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs per Skill</a></li>
-			</div><br>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="width: 280px; font-size: 24px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<li style="width: 276px; margin-top: 3px;"><a href="/analysis/ITJobs" class="filter_analysis_1"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style="width: 25px; height: 25px; margin-left: -10px; margin-top: -12px;">Brisbane IT Jobs - Time</a></li>
+			<li style="width: 276px; margin-top: 3px;"><a href="/analysis/JobsMajorBreakdown" class="filter_analysis_2"><img src="{% static 'project/img/PieGraphIcon.png' %}" class="responsive-img" style="width: 25px; height: 25px; margin-left: -10px; margin-top: -10px;">Brisbane IT Jobs per Major</a></li>
+			<li style="width: 276px; margin-top: 3px;"><a href="/analysis/SkillsDemand" class="filter_analysis_3"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style="width: 25px; height: 25px; margin-left: -10px; margin-top: -11px;">Brisbane IT Jobs per Skill</a></li>
+		    <li style="width: 276px; margin-top: 3px;"><a href="/analysis/" class="filter_analysis_4"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style="width: 25px; height: 25px; margin-left: -10px; margin-top: -12px;">What's This?</a></li>
+		</div><br>
+			
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="height: 55px; width: 280px; font-size: 24px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 			{% include "project/includes/job_search_filter.html" %}
 
 			<br>
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="height: 55px; font-size: 24px; width: 280px; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: 0px 5px 0px 0px; width: 3vh; height 3vh; max-height:100%; max-width:100%' alt="SearchIconSmall">
 			</a>Employer Search<img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 22px; width: 22px; margin-top: 1px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv3">
 			
-			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search/unfiltered/" class="filter_major">- Unfiltered Search</a></li>
-			<li style="width: 277px; margin-left: -10px;"><a href="/employer_search/0/" class="filter_major">- Numbers 0 to 9</a></li><br>
+			<li style="width: 277px;"><a href="/employer_search/unfiltered/" class="filter_major">- Unfiltered Search</a></li>
+			<li style="width: 277px;"><a href="/employer_search/0/" class="filter_major">- Numbers 0 to 9</a></li><br>
 		
-		<button data-toggle="collapse"  data-target="#alphabetical_dropdown" class="emp_dropdown_alphabetical" style="width: 270px; font-size: 16px; margin-left: 9px;"><img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 16px; width: 16px; margin-top: 1px; float: right">
+		<button data-toggle="collapse"  data-target="#alphabetical_dropdown" class="emp_dropdown_alphabetical" style="width: 270px; font-size: 16px; margin-left: 15px;"><img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 16px; width: 16px; margin-top: 1px; float: right">
 			</a>Alphabetical Search</button>
 			
 			{% include "project/includes/employer_search_filter.html" %}
