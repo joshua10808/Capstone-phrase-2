@@ -53,14 +53,14 @@
 			<br><br>
 	      
 		    <li style="white-space: nowrap; margin-left: 2px;" class="homenavtab">
-			<a href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="HomeIconSmall">
+			<a style="font-size: 16.5px;" href='/'><img src="{% static 'project/img/HomeIcon.png' %}" class="responsive-img" style='float: left; margin: -1px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="HomeIconSmall">
 			Home</a></li>
 		   
-			<li style="white-space: nowrap; margin-left: 2px;" class="aboutnavtab"><a href='/about/'><img src="{% static 'project/img/AboutIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
+			<li style="white-space: nowrap; margin-left: 2px;" class="aboutnavtab"><a  style="font-size: 16.5px;" href='/about/'><img src="{% static 'project/img/AboutIcon.png' %}" class="responsive-img" style='float: left; margin: -0px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="QuestionMarkSmall">
 			About</a></li>
 			
-			<button data-toggle="collapse" data-target="#categories_dropdowndiv2" class="analysis_dropdown" style="white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
-			Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; margin: -22px 0px 0px 0px; float: right"></button>
+			<button data-toggle="collapse" data-target="#categories_dropdowndiv2" class="analysis_dropdown" style="font-size: 16.5px; white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/AnalysisIcon.png' %}" class="responsive-img" style='float: left; margin: -1px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			Analysis<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv2" style="height: 100px;">
 				<li><a href="/analysis/ITJobs" class="filter_analysis_1" style="font-size: 12px"><img src="{% static 'project/img/LineGraphIcon.png' %}" class="responsive-img" style='float: left; margin: -12px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%'>Brisbane IT Jobs - Time</a></li>
@@ -69,20 +69,20 @@
 				<li><a href="/analysis/" class="filter_analysis_4" style="font-size: 12px"><img src="{% static 'project/img/AnalysisAbout.png' %}" class="responsive-img" style='float: left; margin: -12px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%'>What's This?</a></li>
 			</div>
 			
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
-			Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; margin: -22px 0px 0px 0px; float: right"></button>
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv" class="job_dropdown" style="font-size: 16.5px; white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			Job Search<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; margin: -0px 0px 0px 0px; float: right"></button>
 			
 			{% include "project/includes/job_search_filter.html" %}
 
-			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
-			Employer Search<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; margin: -22px 0px 0px 0px; float: right"></button>
+			<button data-toggle="collapse"  data-target="#categories_dropdowndiv3" class="empsearch_dropdown" style="font-size: 16.5px; white-space: nowrap; margin-left: 2px;"><img src="{% static 'project/img/SearchIcon.png' %}" class="responsive-img" style='float: left; margin: -2px 5px 0px 0px; width: 1vw; min-height: 20px; min-width: 20px; max-height:100%; max-width:100%' alt="SearchIconSmall">
+			Employer Search<img src="{% static 'project/img/DropDownIcon.png' %}" class="responsive-img" style="height: 18px; width: 18px; margin: -0px 0px 0px 0px; float: right"></button>
 			
 	        <div class="collapse" id="categories_dropdowndiv3">
 			
 			<li style="white-space: nowrap"><a href="/employer_search/unfiltered/" class="filter_major" style="font-size: 12px">- Unfiltered Search</a></li>
 			<li style="white-space: nowrap"><a href="/employer_search/0/" class="filter_major" style="font-size: 12px">- Numbers 0 to 9</a></li>
 		
-		<button data-toggle="collapse"  data-target="#alphabetical_dropdown" class="emp_dropdown_alphabetical" style="font-size: 16px; margin-left: 15px;"><img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 16px; width: 16px; margin-top: 1px; float: right">
+		<button data-toggle="collapse"  data-target="#alphabetical_dropdown" class="emp_dropdown_alphabetical" style="font-size: 12.5px; margin-left: 15px;"><img src="{% static 'project/img/DropDownIcon.png' %}" style="height: 16px; width: 16px; margin-top: 1px; float: right">
 			</a>Alphabetical Search</button>
 			
 			{% include "project/includes/employer_search_filter.html" %}
