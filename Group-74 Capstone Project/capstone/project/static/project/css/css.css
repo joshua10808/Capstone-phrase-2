@@ -10,9 +10,9 @@
 	/* shows where to pull the font from */
 	
 	/* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-    .row.content {height: 1350px;
-	max-height: 1350px;
-	min-width: 1300px;
+    .row.content {height: 1750px;
+	max-height: 1750px;
+	min-width: 1525px;
 	}
     
     /* Set background color and 100% height */
