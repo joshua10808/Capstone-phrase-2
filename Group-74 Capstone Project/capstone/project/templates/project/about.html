@@ -7,25 +7,30 @@
 	background-color: #01467d; !important}
 </style>
 
-<div class="ridge">
-<h3 class="about">About</h3>
+<div class="container-fluid">
+  <div class="col-sm-12">
+	<div class="ridge">
+	<h3 class="about">About</h3>
 
-<p>
-Built as part of a QUT Capstone project in 2017, the QUT Job Market Search Tool trawls Seek.com for Brisbane IT Jobs and Employer information. The tool displays the results with no need for the users to sign in.<br><br>
+	<p>
+	Built as part of a QUT Capstone project in 2017, the QUT Job Market Search Tool trawls Seek.com for Brisbane IT Jobs and Employer information. The tool displays the results with no need for the users to sign in.<br><br>
 
-Jobs displayed through the job search tool can be filtered by QUT Information Technology Majors, Minors and Units involved with the job so that graduates can find jobs that complement their skillset. Information of the jobs provided included the job name, employer, location, work type and salary. <br><br>
+	Jobs displayed through the job search tool can be filtered by QUT Information Technology Majors, Minors and Units involved with the job so that graduates can find jobs that complement their skillset. Information of the jobs provided included the job name, employer, location, work type and salary. <br><br>
 
-Employers that advertise on Seek.com are available for search through the Employer Search Tool, it provides the employer's description and a link for further information on their Seek.com page.
-</P>
+	Employers that advertise on Seek.com are available for search through the Employer Search Tool, it provides the employer's description and a link for further information on their Seek.com page.
+	</P>
 
-<center>
-	<img src="{% static 'project/img/about_flowchart.png' %}" class="responsive-img" style='max-height:100px; max-width:100%' alt="about_flowchart">
-</center>
+	<center>
+		<img src="{% static 'project/img/about_flowchart.png' %}" class="responsive-img" style='max-height:100px; max-width:100%' alt="about_flowchart">
+	</center>
+	</div>
+
+	<br>
+
+	{% include "project/includes/user_agreement.html" %}
+	{% include "project/includes/privacy_policy.html" %}
+	
+	</div>
 </div>
-
-<br>
-
-{% include "project/includes/user_agreement.html" %}
-{% include "project/includes/privacy_policy.html" %}
 
 {% endblock %}
